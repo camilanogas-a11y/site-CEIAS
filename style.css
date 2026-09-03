@@ -1,46 +1,82 @@
-/* ESTILOS GERAIS */
+/* PALETA EXTRAÍDA DO UNIFORME DO C.E.I.A.S.
+   - Azul Marinho (Calça/Gola): #131E3A
+   - Azul Celeste (Camiseta): #5CA2E6
+   - Azul Celeste Suave (Fundo): #EBF3FC
+   - Vermelho Destaque (Estrela Logo): #D9383A
+   - Branco: #FFFFFF
+*/
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
-    color: #1e293b;
+    color: #131E3A;
     background-color: #ffffff;
     line-height: 1.6;
 }
 
 .container {
-    width: 85%;
-    max-width: 1100px;
+    width: 90%;
+    max-width: 1150px;
     margin: auto;
 }
 
 .section {
-    padding: 60px 0;
+    padding: 80px 0;
 }
 
-.subtitulo-secao {
-    margin-bottom: 25px;
-    color: #475569;
+.bg-celeste {
+    background-color: #EBF3FC;
 }
 
-/* FUNDO SUAVE COM TOM DE AZUL CLARO */
-.bg-light {
-    background-color: #f0f7ff;
+.text-center {
+    text-align: center;
 }
 
-/* CABEÇALHO (AZUL ESCURO/MARINHO) */
-header {
-    background-color: #0a192f;
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    align-items: center;
+}
+
+/* COMPONENTES DE DESIGN */
+.badge {
+    background-color: #5CA2E6;
     color: #ffffff;
-    padding: 20px 0;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.badge-red {
+    background-color: #D9383A;
+}
+
+.title-section {
+    font-size: 2.2rem;
+    color: #131E3A;
+    margin-bottom: 20px;
+}
+
+/* CABEÇALHO */
+header {
+    background-color: #131E3A;
+    color: #ffffff;
+    padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 3px solid #1e40af;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-bottom: 3px solid #5CA2E6;
 }
 
 .header-container {
@@ -51,173 +87,246 @@ header {
 
 .logo h1 {
     font-size: 1.8rem;
+    line-height: 1;
     color: #ffffff;
 }
 
-.logo p {
-    font-size: 0.85rem;
-    color: #60a5fa; /* Azul claro / destaque */
-    font-weight: 500;
+.logo span {
+    font-size: 0.75rem;
+    color: #5CA2E6;
+    font-style: italic;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-}
-
-nav ul li {
-    margin-left: 20px;
+    gap: 20px;
 }
 
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 0.95rem;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #60a5fa;
+    color: #5CA2E6;
 }
 
-/* BANNER PRINCIPAL (GRADIENTE DOS TONS DE AZUL) */
+/* BANNER PRINCIPAL */
 .hero {
-    background: linear-gradient(135deg, rgba(10, 25, 47, 0.9), rgba(30, 64, 175, 0.85)), url('https://via.placeholder.com/1200x400');
-    background-size: cover;
+    position: relative;
+    background: linear-gradient(135deg, #131E3A 0%, #224275 100%);
     color: #ffffff;
+    padding: 120px 0;
     text-align: center;
-    padding: 100px 0;
 }
 
 .hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 3rem;
+    margin-bottom: 15px;
 }
 
-/* BOTÃO AZUL VIVO */
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    color: #EBF3FC;
+}
+
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
 .btn {
-    display: inline-block;
-    background-color: #2563eb;
-    color: #ffffff;
-    padding: 12px 24px;
+    padding: 12px 28px;
+    border-radius: 30px;
     text-decoration: none;
-    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #D9383A;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #b82b2d;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border: 2px solid #5CA2E6;
+    color: #ffffff;
+}
+
+.btn-outline:hover {
+    background-color: #5CA2E6;
+    color: #131E3A;
+}
+
+/* CARD SOBRE */
+.about-card {
+    background: #5CA2E6;
+    color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(92, 162, 230, 0.3);
+}
+
+.list-features {
+    list-style: none;
     margin-top: 15px;
-    font-weight: bold;
-    transition: background-color 0.3s;
 }
 
-.btn:hover {
-    background-color: #1d4ed8;
+.list-features li {
+    margin-bottom: 8px;
+    font-weight: 600;
 }
 
-/* CARDS DE EQUIPE */
+/* FILTROS E EQUIPE */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: #ffffff;
+    border: 2px solid #5CA2E6;
+    color: #131E3A;
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: #131E3A;
+    color: #ffffff;
+    border-color: #131E3A;
+}
+
 .grid-equipe {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
 }
 
 .card-membro {
     background: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
+    padding: 25px;
+    border-radius: 12px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-    border-top: 4px solid #2563eb; /* Detalhe azul */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-top: 5px solid #5CA2E6;
+    transition: transform 0.3s;
+}
+
+.card-membro:hover {
+    transform: translateY(-5px);
 }
 
 .foto-perfil {
-    width: 110px;
-    height: 110px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
+    background-color: #EBF3FC;
+    border: 3px solid #5CA2E6;
     margin: 0 auto 15px auto;
-    background-color: #e2e8f0;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #64748b;
-    font-size: 0.8rem;
-    border: 2px solid #93c5fd;
-}
-
-.card-membro h3 {
-    color: #0a192f;
-    font-size: 1.2rem;
+    color: #5CA2E6;
 }
 
 .card-membro .cargo {
+    color: #D9383A;
+    font-weight: 600;
+    font-size: 0.85rem;
     display: block;
-    color: #2563eb;
-    font-weight: bold;
-    font-size: 0.9rem;
     margin-bottom: 10px;
 }
 
-/* GALERIA DE FOTOS */
+/* EVENTOS */
+.grid-eventos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.card-evento {
+    background: #ffffff;
+    border: 2px solid #EBF3FC;
+    border-radius: 12px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+.card-evento.destaque {
+    border-color: #D9383A;
+    background: linear-gradient(180deg, #ffffff 0%, #fff8f8 100%);
+}
+
+.tag-evento {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #D9383A;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.tag-evento.secundario {
+    background: #131E3A;
+}
+
+.data-evento {
+    color: #5CA2E6;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* GALERIA */
 .grid-galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
 }
 
 .item-galeria {
-    background: #ffffff;
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    text-align: center;
-    border: 1px solid #e2e8f0;
-}
-
-.placeholder-img {
-    height: 160px;
-    background-color: #cbd5e1;
+    height: 150px;
+    background-color: #5CA2E6;
+    color: #ffffff;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #334155;
-}
-
-.item-galeria p {
-    padding: 10px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: #0a192f;
-}
-
-/* BLOG */
-.grid-blog {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-
-.post {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 6px;
-    border-left: 5px solid #1e40af;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-.post h3 {
-    color: #0a192f;
+    font-weight: 600;
 }
 
 /* CONTATO */
-.contato-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+.info-box p {
+    margin-bottom: 12px;
 }
 
-/* RODAPÉ (AZUL ESCURO) */
+/* RODAPÉ */
 footer {
-    background-color: #0a192f;
+    background-color: #131E3A;
     color: #ffffff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-    border-top: 1px solid #1e40af;
+    padding: 30px 0;
+    border-top: 4px solid #D9383A;
 }
