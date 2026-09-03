@@ -5,25 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C.E.I.A.S. - Colégio Estadual do Campo Irmã Ambrósia Sabatovich</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="container nav-container">
-            <div class="logo-box">
-                <img src="logo.jpg" alt="Logo C.E.I.A.S." class="logo-img">
-                <div class="logo-text">
-                    <h1>C.E.I.A.S.</h1>
-                    <span>Educando para a Comunidade</span>
-                </div>
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>C.E.I.A.S.</h1>
+                <p>Educando para a Comunidade</p>
             </div>
             <nav>
-                <ul class="nav-links">
+                <ul>
                     <li><a href="#inicio">Início</a></li>
-                    <li><a href="#sobre">Sobre & Logo</a></li>
-                    <li><a href="#uniformes">Uniformes</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
                     <li><a href="#equipe">Equipe</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
                     <li><a href="#blog">Blog</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
@@ -31,129 +28,120 @@
         </div>
     </header>
 
+    <!-- BANNER PRINCIPAL -->
     <section id="inicio" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <span class="badge">Colônia Marcelino - São José dos Pinhais</span>
-            <h2>Tradição, Campo e Futuro no Ensino</h2>
-            <p>Formando cidadãos com valores comunitários do Ensino Fundamental ao Médio.</p>
-            <div class="hero-buttons">
-                <a href="#uniformes" class="btn btn-primary"><i class="fas fa-tshirt"></i> Ver Uniformes</a>
-                <a href="#contato" class="btn btn-secondary"><i class="fas fa-map-marker-alt"></i> Visite-nos</a>
-            </div>
+        <div class="container">
+            <h2>Ensino Fundamental e Médio de Qualidade</h2>
+            <p>Formando cidadãos e fortalecendo nossa comunidade.</p>
+            <a href="#contato" class="btn">Fale Conosco</a>
         </div>
     </section>
 
+    <!-- SOBRE E HISTÓRIA -->
     <section id="sobre" class="section">
-        <div class="container grid-2">
-            <div class="about-text">
-                <span class="sub-title">Nossa História</span>
-                <h2>Saber que Transforma a Comunidade</h2>
-                <p>Localizado na Colônia Marcelino, o <strong>C.E.I.A.S.</strong> homenageia a Irmã Ambrósia Sabatovycz, cuja trajetória no Paraná foi dedicada ao cuidado comunitário e à educação rural.</p>
-                <p>Nossa infraestrutura conta com espaços verdes, biblioteca interativa e quadra poliesportiva para acolher nossos alunos com excelência.</p>
-            </div>
-            <div class="logo-card">
-                <img src="logo.jpg" alt="Brasão C.E.I.A.S." class="logo-large">
-                <div class="logo-info">
-                    <h3>Nosso Brasão</h3>
-                    <p>As estrelas simbolizam o guia do conhecimento, enquanto o escudo reflete a proteção e a união da comunidade escolar.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="uniformes" class="section bg-light">
         <div class="container">
-            <div class="section-title">
-                <h2>Uniformes Oficiais</h2>
-                <p>Uso obrigatório para identificação e segurança de todos os estudantes.</p>
-            </div>
-            <div class="grid-cards">
-                <div class="card-item">
-                    <div class="card-img-holder">
-                        <img src="https://via.placeholder.com/400x300?text=Uniforme+Verão" alt="Uniforme de Verão">
-                    </div>
-                    <div class="card-body">
-                        <h3>Kit Verão</h3>
-                        <p>Camiseta oficial com o logotipo bordado e bermuda esportiva respirável.</p>
-                    </div>
-                </div>
-                <div class="card-item">
-                    <div class="card-img-holder">
-                        <img src="https://via.placeholder.com/400x300?text=Uniforme+Inverno" alt="Uniforme de Inverno">
-                    </div>
-                    <div class="card-body">
-                        <h3>Kit Inverno</h3>
-                        <p>Jaqueta flanelada e calça de agasalho nas cores oficiais azul e vermelho.</p>
-                    </div>
-                </div>
-                <div class="card-item">
-                    <div class="card-img-holder">
-                        <img src="https://via.placeholder.com/400x300?text=Educacao+Fisica" alt="Uniforme Educação Física">
-                    </div>
-                    <div class="card-body">
-                        <h3>Educação Física</h3>
-                        <p>Conjunto leve para práticas esportivas e eventos recreativos da escola.</p>
-                    </div>
-                </div>
-            </div>
+            <h2>Nossa História e Estrutura</h2>
+            <p>O Colégio Estadual do Campo Irmã Ambrósia Sabatovich tem orgulho de sua trajetória voltada à educação do campo. Nossa estrutura conta com salas equipadas, biblioteca, laboratórios e espaços esportivos adaptados para o desenvolvimento integral dos alunos.</p>
         </div>
     </section>
 
-    <section id="equipe" class="section">
+    <!-- EQUIPE E FUNCIONÁRIOS -->
+    <section id="equipe" class="section bg-light">
         <div class="container">
-            <div class="section-title">
-                <h2>Quem Faz Acontecer</h2>
-                <p>Nossa equipe qualificada e atenciosa.</p>
-            </div>
-            <div class="grid-cards">
-                <div class="profile-card">
-                    <img src="https://via.placeholder.com/150" alt="Professores">
-                    <h3>Corpo Docente</h3>
-                    <span class="role">Professores</span>
-                    <p>Especialistas no Ensino Fundamental e Médio focados em projetos rurais e científicos.</p>
+            <h2>Nossa Equipe</h2>
+            <p class="subtitulo-secao">Conheça quem faz a educação acontecer no C.E.I.A.S.</p>
+            
+            <div class="grid-equipe">
+                <!-- Modelo de Card que preencheremos com os nomes enviados -->
+                <div class="card-membro">
+                    <div class="foto-perfil placeholder-foto">Espaço p/ Foto</div>
+                    <h3>Nome do Profissional</h3>
+                    <span class="cargo">Cargo / Disciplina</span>
+                    <p>Descrição breve da área de atuação ou mensagem curta.</p>
                 </div>
-                <div class="profile-card">
-                    <img src="https://via.placeholder.com/150" alt="Equipe Pedagógica">
-                    <h3>Equipe Pedagógica</h3>
-                    <span class="role">Orientadores</span>
-                    <p>Suporte contínuo para o acompanhamento socioemocional e aprendizagem.</p>
+                <div class="card-membro">
+                    <div class="foto-perfil placeholder-foto">Espaço p/ Foto</div>
+                    <h3>Nome do Profissional</h3>
+                    <span class="cargo">Cargo / Disciplina</span>
+                    <p>Descrição breve da área de atuação ou mensagem curta.</p>
                 </div>
-                <div class="profile-card">
-                    <img src="https://via.placeholder.com/150" alt="Funcionários">
-                    <h3>Apoio e Secretaria</h3>
-                    <span class="role">Administrativo</span>
-                    <p>Garantia de merenda escolar saudável, limpeza e atendimento aos pais.</p>
+                <div class="card-membro">
+                    <div class="foto-perfil placeholder-foto">Espaço p/ Foto</div>
+                    <h3>Nome do Profissional</h3>
+                    <span class="cargo">Cargo / Disciplina</span>
+                    <p>Descrição breve da área de atuação ou mensagem curta.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- GALERIA DE FOTOS -->
+    <section id="galeria" class="section">
+        <div class="container">
+            <h2>Galeria de Fotos</h2>
+            <p class="subtitulo-secao">Registros do nosso colégio, eventos e cotidiano escolar.</p>
+            
+            <div class="grid-galeria">
+                <div class="item-galeria">
+                    <div class="placeholder-img">Foto das Instalações</div>
+                    <p>Estrutura do Colégio</p>
+                </div>
+                <div class="item-galeria">
+                    <div class="placeholder-img">Foto de Eventos</div>
+                    <p>Projetos Comunitários</p>
+                </div>
+                <div class="item-galeria">
+                    <div class="placeholder-img">Foto da Horta/Campo</div>
+                    <p>Atividades do Campo</p>
+                </div>
+                <div class="item-galeria">
+                    <div class="placeholder-img">Foto das Salas</div>
+                    <p>Salas de Aula e Laboratórios</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG -->
     <section id="blog" class="section bg-light">
         <div class="container">
-            <div class="section-title">
-                <h2>Notícias & Atividades</h2>
-                <p>Acompanhe os projetos mais recentes dos nossos alunos.</p>
-            </div>
-            <div class="grid-cards">
-                <article class="blog-card">
-                    <img src="https://via.placeholder.com/400x200?text=Feira+Cultural" alt="Blog 1">
-                    <div class="blog-content">
-                        <span class="date">28 de Agosto, 2026</span>
-                        <h3>Feira de Sabores da Colônia</h3>
-                        <p>Alunos apresentam projetos valorizando a produção agrícola local.</p>
-                    </div>
+            <h2>Blog e Notícias</h2>
+            <div class="grid-blog">
+                <article class="post">
+                    <h3>Feira de Ciências</h3>
+                    <p>Confira os projetos apresentados pelos nossos alunos no último evento.</p>
                 </article>
-                <article class="blog-card">
-                    <img src="https://via.placeholder.com/400x200?text=Esportes" alt="Blog 2">
-                    <div class="blog-content">
-                        <span class="date">15 de Agosto, 2026</span>
-                        <h3>Torneio Interclasses</h3>
-                        <p>Integração e incentivo ao esporte na quadra poliesportiva.</p>
-                    </div>
+                <article class="post">
+                    <h3>Projetos Comunitários</h3>
+                    <p>Como nossas atividades do campo conectam a escola à comunidade local.</p>
                 </article>
             </div>
         </div>
     </section>
 
-    <section
+    <!-- CONTATO E LOCALIZAÇÃO -->
+    <section id="contato" class="section">
+        <div class="container">
+            <h2>Contato e Localização</h2>
+            <div class="contato-wrapper">
+                <div class="info-contato">
+                    <p><strong>Endereço:</strong> Área Rural, Colégio do Campo</p>
+                    <p><strong>Telefone:</strong> (00) 0000-0000</p>
+                    <p><strong>E-mail:</strong> contato@ceias.edu.br</p>
+                </div>
+                <div class="mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3600.000000000000!2d-49.0000000!3d-25.0000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDAwJzAwLjAiUyA0OcKwMDAnMDAuMCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container">
+            <p>&copy; C.E.I.A.S. - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
