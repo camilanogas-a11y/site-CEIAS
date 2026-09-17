@@ -1,27 +1,23 @@
-// INTERATIVIDADE E MOVIMENTOS DO SITE (JAVASCRIPT)
-
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. EFITO DE SOMBRA NO HEADER AO ROLAR A PÁGINA
+    // 1. EFITO DE SOMBRA NO MENU AO ROLAR
     const header = document.getElementById('header');
     
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
+        if (window.scrollY > 40) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
         }
     });
 
-    // 2. FILTRO DA EQUIPE E FUNCIONÁRIOS
+    // 2. FILTRO DE EQUIPE E FUNCIONÁRIOS
     const filterButtons = document.querySelectorAll('.filter-btn');
     const cardsMembros = document.querySelectorAll('.card-membro');
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Remove a classe ativa de todos os botões
             filterButtons.forEach(btn => btn.classList.remove('active'));
-            // Adiciona classe ativa ao botão clicado
             button.classList.add('active');
 
             const categoria = button.getAttribute('data-filter');
@@ -38,13 +34,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     card.style.transform = 'translateY(20px)';
                     setTimeout(() => {
                         card.style.display = 'none';
-                    }, 300);
+                    }, 250);
                 }
             });
         });
     });
 
-    // 3. ANIMAÇÃO DE REVELAÇÃO AO ROLAR A PÁGINA (SCROLL REVEAL)
+    // 3. ANIMAÇÃO DE MOVIMENTO AO ROLAR A PÁGINA (SCROLL REVEAL)
     const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
 
     const observer = new IntersectionObserver((entries) => {
@@ -54,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, {
-        threshold: 0.15
+        threshold: 0.12
     });
 
     elementsToAnimate.forEach(element => {

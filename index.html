@@ -3,158 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C.E.I.A.S. - Colégio Estadual do Campo Irmã Ambrósia Sabatovich</title>
+    <title>Colégio Estadual do Campo Irmã Ambrósia Sabatovich - C.E.I.A.S.</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- BARRA SUPERIOR DE ESTRELAS -->
+    <div class="top-stars-bar">
+        <div class="stars-container">
+            ★ ★ ★ <span class="star-red">★</span> ★ ★ ★
+        </div>
+    </div>
+
+    <!-- CABEÇALHO -->
     <header id="header">
         <div class="container header-container">
             <div class="logo">
-                <h1>C.E.I.A.S.</h1>
-                <span>"Educando para a Comunidade"</span>
+                <div class="logo-shield">C.E.I.A.S.</div>
+                <div class="logo-text">
+                    <h1>Col. Est. do Campo Ir. Ambrósia Sabatovich</h1>
+                    <span>"Educando para a Comunidade"</span>
+                </div>
             </div>
             <nav>
                 <ul class="nav-links">
                     <li><a href="#inicio">Início</a></li>
-                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#sobre">História</a></li>
                     <li><a href="#equipe">Equipe</a></li>
                     <li><a href="#eventos">Eventos</a></li>
                     <li><a href="#galeria">Galeria</a></li>
-                    <li><a href="#contato" class="btn-menu">Contato</a></li>
+                    <li><a href="#contato" class="btn-menu">Localização</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <!-- HERO / BANNER PRINCIPAL -->
     <section id="inicio" class="hero">
         <div class="container hero-content fade-in">
-            <span class="badge badge-accent">Tradição & Inovação</span>
-            <h2>Construindo o Futuro no Campo</h2>
-            <p>Ensino Fundamental e Médio voltado ao desenvolvimento acadêmico, humano e comunitário.</p>
+            <span class="badge badge-yellow">Ensino Fundamental e Médio</span>
+            <h2>Educando para a Comunidade</h2>
+            <p>Formação humana, cidadania e tradição na Colônia Marcelino.</p>
             <div class="hero-btns">
-                <a href="#eventos" class="btn btn-primary">Próximos Eventos</a>
-                <a href="#sobre" class="btn btn-outline">Conheça o Colégio</a>
+                <a href="#eventos" class="btn btn-red">Próximos Eventos</a>
+                <a href="#sobre" class="btn btn-outline">Conheça Nossa História</a>
             </div>
         </div>
     </section>
 
+    <!-- HISTÓRIA E SOBRE -->
     <section id="sobre" class="section">
         <div class="container grid-2">
             <div class="animate-on-scroll">
-                <span class="badge">Nossa História</span>
-                <h2 class="title-section">Educação e Valores Comunitários</h2>
-                <p>O Colégio Estadual do Campo Irmã Ambrósia Sabatovich une tradição educacional ao compromisso social. Nossa Proposta Pedagógica estimula o protagonismo juvenil e o aprendizado integrado à vida no campo.</p>
-                <ul class="list-features">
-                    <li>✓ Ensino Fundamental e Médio integrados</li>
-                    <li>✓ Acompanhamento pedagógico personalizado</li>
-                    <li>✓ Estrutura adaptada para atividades práticas</li>
-                </ul>
+                <span class="badge badge-blue">Nossa Trajetória</span>
+                <h2 class="title-section">Tradição na Colônia Marcelino</h2>
+                <p>O <strong>Colégio Estadual do Campo Irmã Ambrósia Sabatovich (C.E.I.A.S.)</strong> carrega o nome e os valores de uma trajetória dedicada à fé, educação e serviço comunitário iniciada na década de 1930.</p>
+                <p>Nossa missão é garantir o Ensino Fundamental e Médio de excelência, formando cidadãos conscientes e valorizando a integração das famílias do campo com o ambiente escolar.</p>
+                
+                <div class="features-list">
+                    <div class="feature-item">
+                        <span class="feature-icon">✔</span>
+                        <div><strong>Integração Comunitária:</strong> Atividades que valorizam a cultura local.</div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">✔</span>
+                        <div><strong>Formação Integral:</strong> Foco no desenvolvimento intelectual, social e humano.</div>
+                    </div>
+                </div>
             </div>
-            <div class="about-card animate-on-scroll">
-                <h3>Formação Integral</h3>
-                <p>Projetos contínuos de incentivo ao conhecimento, sustentabilidade e cultura local.</p>
+            
+            <div class="history-card animate-on-scroll">
+                <h3>Educando para a Comunidade</h3>
+                <p>Inspirados pelo lema oficial do colégio, promovemos o conhecimento como ferramenta de transformação da nossa comunidade rural.</p>
+                <div class="stars-badge">
+                    <span>★ ★ ★ ★ ★ ★ ★</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="equipe" class="section bg-celeste">
+    <!-- EQUIPE E FUNCIONÁRIOS -->
+    <section id="equipe" class="section bg-light-blue">
         <div class="container text-center">
-            <span class="badge">Quem Faz Acontecer</span>
-            <h2 class="title-section">Professores e Funcionários</h2>
+            <span class="badge badge-blue">Corpo Docente e Apoio</span>
+            <h2 class="title-section">Nossa Equipe e Colaboradores</h2>
+            <p class="subtitle-section">Os profissionais que fazem o C.E.I.A.S. acontecer todos os dias.</p>
 
+            <!-- BOTOES DE FILTRO INTERATIVO -->
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="todos">Todos</button>
                 <button class="filter-btn" data-filter="docente">Professores</button>
-                <button class="filter-btn" data-filter="gestao">Gestão & Pedagógico</button>
-                <button class="filter-btn" data-filter="apoio">Funcionários & Apoio</button>
+                <button class="filter-btn" data-filter="gestao">Direção & Pedagógico</button>
+                <button class="filter-btn" data-filter="apoio">Equipe de Apoio</button>
             </div>
 
             <div class="grid-equipe">
+                <!-- Modelo Professor -->
                 <div class="card-membro docente animate-on-scroll">
                     <div class="foto-perfil"><span>Foto</span></div>
                     <h3>Nome do Professor</h3>
-                    <span class="cargo">Disciplina / Área</span>
-                    <p>Metodologias ativas e acompanhamento pedagógico contínuo.</p>
+                    <span class="cargo">Disciplina / Cadeira</span>
+                    <p>Compromisso com o aprendizado dinâmico e suporte escolar do aluno.</p>
                 </div>
+                <!-- Modelo Gestão -->
                 <div class="card-membro gestao animate-on-scroll">
                     <div class="foto-perfil"><span>Foto</span></div>
                     <h3>Nome do Gestor</h3>
                     <span class="cargo">Direção / Coordenação</span>
-                    <p>Gestão participativa focada na excelência educacional.</p>
+                    <p>Orientação e gestão participativa na comunidade escolar.</p>
                 </div>
+                <!-- Modelo Apoio -->
                 <div class="card-membro apoio animate-on-scroll">
                     <div class="foto-perfil"><span>Foto</span></div>
-                    <h3>Nome do Funcionário</h3>
-                    <span class="cargo">Secretaria / Apoio</span>
-                    <p>Dedicação diária no suporte administrativo e convivência escolar.</p>
+                    <h3>Nome do Colaborador</h3>
+                    <span class="cargo">Secretaria / Apoio / Alimentação</span>
+                    <p>Cuidado e dedicação com a rotina e a estrutura do colégio.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- EVENTOS -->
     <section id="eventos" class="section">
         <div class="container">
             <div class="text-center">
-                <span class="badge badge-red">Vida Escolar</span>
-                <h2 class="title-section">Eventos e Destaques</h2>
+                <span class="badge badge-red">Calendário Escolar</span>
+                <h2 class="title-section">Eventos e Festividades</h2>
             </div>
 
             <div class="grid-eventos">
                 <div class="card-evento destaque animate-on-scroll">
                     <div class="tag-evento">Em Breve</div>
                     <h3>🌸 Primavera Fest</h3>
-                    <p class="data-evento">📅 Celebração da Primavera</p>
-                    <p>Evento com apresentações culturais, brincadeiras, comida típica e integração das famílias.</p>
+                    <p class="data-evento">📅 Evento Tradicional</p>
+                    <p>Celebração cultural com apresentações dos alunos, brincadeiras, comidas típicas e integração com toda a comunidade da Colônia Marcelino.</p>
                 </div>
+
                 <div class="card-evento animate-on-scroll">
                     <div class="tag-evento secundario">Anual</div>
-                    <h3>🔬 Feira do Conhecimento</h3>
-                    <p class="data-evento">📅 Projetos Científicos</p>
-                    <p>Exposição de trabalhos acadêmicos e projetos voltados à comunidade local.</p>
+                    <h3>🔬 Feira de Ciências e Cultura</h3>
+                    <p class="data-evento">📅 Exposição Escolar</p>
+                    <p>Exposição de projetos acadêmicos, práticos e científicos desenvolvidos durante o ano letivo.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="galeria" class="section bg-celeste">
+    <!-- GALERIA DE FOTOS -->
+    <section id="galeria" class="section bg-light-blue">
         <div class="container text-center">
-            <span class="badge">Registros</span>
-            <h2 class="title-section">Galeria de Fotos</h2>
+            <span class="badge badge-blue">Nossos Espaços</span>
+            <h2 class="title-section">Galeria do Colégio</h2>
             <div class="grid-galeria">
-                <div class="item-galeria animate-on-scroll"><span>Estrutura Escolar</span></div>
-                <div class="item-galeria animate-on-scroll"><span>Projetos de Campo</span></div>
+                <div class="item-galeria animate-on-scroll"><span>Estrutura Física</span></div>
+                <div class="item-galeria animate-on-scroll"><span>Atividades no Campo</span></div>
                 <div class="item-galeria animate-on-scroll"><span>Primavera Fest</span></div>
-                <div class="item-galeria animate-on-scroll"><span>Atividades Esportivas</span></div>
+                <div class="item-galeria animate-on-scroll"><span>Eventos Culturais</span></div>
             </div>
         </div>
     </section>
 
+    <!-- CONTATO E LOCALIZAÇÃO -->
     <section id="contato" class="section">
         <div class="container grid-2">
             <div class="animate-on-scroll">
-                <span class="badge">Atendimento</span>
-                <h2 class="title-section">Contato e Localização</h2>
+                <span class="badge badge-blue">Localização</span>
+                <h2 class="title-section">Onde Estamos</h2>
                 <div class="info-box">
-                    <p><strong>📍 Endereço:</strong> Área Rural, Colégio do Campo</p>
-                    <p><strong>📞 Telefone:</strong> (00) 0000-0000</p>
-                    <p><strong>✉️ E-mail:</strong> contato@ceias.edu.br</p>
+                    <p><strong>📍 Endereço:</strong> Rua Principal, s/n - Colônia Marcelino, São José dos Pinhais - PR, 83800-000</p>
+                    <p><strong>📞 Atendimento:</strong> Secretaria do Colégio</p>
+                    <p><strong>🏫 Modalidade:</strong> Ensino Fundamental e Médio</p>
                 </div>
             </div>
             <div class="map-box animate-on-scroll">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3600.000000000000!2d-49.0000000!3d-25.0000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDAwJzAwLjAiUyA0OcKwMDAnMDAuMCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890" width="100%" height="280" style="border:0; border-radius:16px;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.5367623194095!2d-49.2088889!3d-25.6536111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dcf01c70e0586b%3A0xa59f77626941865c!2sCol%C3%B4nia%20Marcelino!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" width="100%" height="280" style="border:0; border-radius:16px;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
 
+    <!-- RODAPÉ -->
     <footer>
         <div class="container text-center">
-            <p>© 2026 C.E.I.A.S. - Colégio Estadual do Campo Irmã Ambrósia Sabatovich.</p>
+            <p>© C.E.I.A.S. - Colégio Estadual do Campo Irmã Ambrósia Sabatovich</p>
             <p><small>"Educando para a Comunidade"</small></p>
         </div>
     </footer>
 
+    <!-- JS DE MOVIMENTO E INTERATIVIDADE -->
     <script src="script.js"></script>
 </body>
 </html>
