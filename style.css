@@ -1,11 +1,4 @@
-/* PALETA EXTRAÍDA DO UNIFORME DO C.E.I.A.S.
-   - Azul Marinho (Calça/Gola): #131E3A
-   - Azul Celeste (Camiseta): #5CA2E6
-   - Azul Celeste Suave (Fundo): #EBF3FC
-   - Vermelho Destaque (Estrela Logo): #D9383A
-   - Branco: #FFFFFF
-*/
-
+/* DESIGN E CORES BASEADOS NO UNIFORME E INSPIRADO NO LAYOUT MARISTA */
 * {
     margin: 0;
     padding: 0;
@@ -18,20 +11,21 @@ body {
     color: #131E3A;
     background-color: #ffffff;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .container {
     width: 90%;
-    max-width: 1150px;
+    max-width: 1180px;
     margin: auto;
 }
 
 .section {
-    padding: 80px 0;
+    padding: 90px 0;
 }
 
 .bg-celeste {
-    background-color: #EBF3FC;
+    background-color: #F2F7FD;
 }
 
 .text-center {
@@ -45,16 +39,16 @@ body {
     align-items: center;
 }
 
-/* COMPONENTES DE DESIGN */
+/* BADGES E TÍTULOS ESTILO MARISTA */
 .badge {
     background-color: #5CA2E6;
     color: #ffffff;
-    padding: 4px 12px;
-    border-radius: 20px;
+    padding: 6px 16px;
+    border-radius: 50px;
     font-size: 0.8rem;
     font-weight: 600;
     display: inline-block;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .badge-red {
@@ -65,18 +59,24 @@ body {
     font-size: 2.2rem;
     color: #131E3A;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
-/* CABEÇALHO */
+/* CABEÇALHO FIXO COM EFITO JS DE SOMBRA */
 header {
     background-color: #131E3A;
     color: #ffffff;
-    padding: 15px 0;
+    padding: 18px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
     border-bottom: 3px solid #5CA2E6;
+}
+
+header.scrolled {
+    padding: 12px 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
 .header-container {
@@ -87,7 +87,7 @@ header {
 
 .logo h1 {
     font-size: 1.8rem;
-    line-height: 1;
+    font-weight: 700;
     color: #ffffff;
 }
 
@@ -95,18 +95,20 @@ header {
     font-size: 0.75rem;
     color: #5CA2E6;
     font-style: italic;
+    display: block;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 24px;
+    align-items: center;
 }
 
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 0.95rem;
     transition: color 0.3s;
 }
@@ -115,23 +117,31 @@ nav ul li a:hover {
     color: #5CA2E6;
 }
 
+.btn-menu {
+    background-color: #D9383A;
+    padding: 8px 18px;
+    border-radius: 50px;
+    color: #fff !important;
+    font-weight: 600;
+}
+
 /* BANNER PRINCIPAL */
 .hero {
-    position: relative;
-    background: linear-gradient(135deg, #131E3A 0%, #224275 100%);
+    background: linear-gradient(135deg, #131E3A 0%, #1e3a75 100%);
     color: #ffffff;
-    padding: 120px 0;
+    padding: 130px 0;
     text-align: center;
 }
 
 .hero h2 {
-    font-size: 3rem;
+    font-size: 3.2rem;
     margin-bottom: 15px;
+    font-weight: 700;
 }
 
 .hero p {
     font-size: 1.2rem;
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 auto 30px auto;
     color: #EBF3FC;
 }
@@ -143,8 +153,8 @@ nav ul li a:hover {
 }
 
 .btn {
-    padding: 12px 28px;
-    border-radius: 30px;
+    padding: 14px 32px;
+    border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
@@ -156,8 +166,8 @@ nav ul li a:hover {
 }
 
 .btn-primary:hover {
-    background-color: #b82b2d;
-    transform: translateY(-2px);
+    background-color: #be2d2f;
+    transform: translateY(-3px);
 }
 
 .btn-outline {
@@ -168,15 +178,16 @@ nav ul li a:hover {
 .btn-outline:hover {
     background-color: #5CA2E6;
     color: #131E3A;
+    transform: translateY(-3px);
 }
 
-/* CARD SOBRE */
+/* SOBRE */
 .about-card {
     background: #5CA2E6;
     color: #ffffff;
     padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(92, 162, 230, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(92, 162, 230, 0.25);
 }
 
 .list-features {
@@ -185,16 +196,16 @@ nav ul li a:hover {
 }
 
 .list-features li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-weight: 600;
 }
 
-/* FILTROS E EQUIPE */
+/* FILTROS E CARDS DA EQUIPE */
 .filter-buttons {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-bottom: 30px;
+    gap: 12px;
+    margin-bottom: 35px;
     flex-wrap: wrap;
 }
 
@@ -202,8 +213,8 @@ nav ul li a:hover {
     background: #ffffff;
     border: 2px solid #5CA2E6;
     color: #131E3A;
-    padding: 8px 18px;
-    border-radius: 20px;
+    padding: 10px 22px;
+    border-radius: 50px;
     cursor: pointer;
     font-weight: 600;
     transition: all 0.3s;
@@ -217,27 +228,28 @@ nav ul li a:hover {
 
 .grid-equipe {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 25px;
 }
 
 .card-membro {
     background: #ffffff;
-    padding: 25px;
-    border-radius: 12px;
+    padding: 30px 20px;
+    border-radius: 16px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.04);
     border-top: 5px solid #5CA2E6;
-    transition: transform 0.3s;
+    transition: all 0.3s ease;
 }
 
 .card-membro:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
 }
 
 .foto-perfil {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     background-color: #EBF3FC;
     border: 3px solid #5CA2E6;
@@ -259,17 +271,22 @@ nav ul li a:hover {
 /* EVENTOS */
 .grid-eventos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 25px;
 }
 
 .card-evento {
     background: #ffffff;
     border: 2px solid #EBF3FC;
-    border-radius: 12px;
-    padding: 30px;
+    border-radius: 16px;
+    padding: 35px;
     position: relative;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+    transition: transform 0.3s;
+}
+
+.card-evento:hover {
+    transform: translateY(-5px);
 }
 
 .card-evento.destaque {
@@ -279,13 +296,13 @@ nav ul li a:hover {
 
 .tag-evento {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 20px;
+    right: 20px;
     background: #D9383A;
     color: #fff;
     font-size: 0.75rem;
-    padding: 3px 10px;
-    border-radius: 10px;
+    padding: 4px 12px;
+    border-radius: 20px;
     font-weight: 600;
 }
 
@@ -302,31 +319,44 @@ nav ul li a:hover {
 /* GALERIA */
 .grid-galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
     margin-top: 30px;
 }
 
 .item-galeria {
-    height: 150px;
+    height: 170px;
     background-color: #5CA2E6;
     color: #ffffff;
-    border-radius: 10px;
+    border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 600;
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
-/* CONTATO */
-.info-box p {
-    margin-bottom: 12px;
+.item-galeria:hover {
+    transform: scale(1.03);
+}
+
+/* ANIMAÇÃO DE ROLAGEM */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* RODAPÉ */
 footer {
     background-color: #131E3A;
     color: #ffffff;
-    padding: 30px 0;
+    padding: 35px 0;
     border-top: 4px solid #D9383A;
 }

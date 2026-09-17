@@ -5,106 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C.E.I.A.S. - Colégio Estadual do Campo Irmã Ambrósia Sabatovich</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- CABEÇALHO -->
-    <header>
+    <header id="header">
         <div class="container header-container">
             <div class="logo">
                 <h1>C.E.I.A.S.</h1>
                 <span>"Educando para a Comunidade"</span>
             </div>
             <nav>
-                <ul>
+                <ul class="nav-links">
                     <li><a href="#inicio">Início</a></li>
                     <li><a href="#sobre">Sobre Nós</a></li>
                     <li><a href="#equipe">Equipe</a></li>
                     <li><a href="#eventos">Eventos</a></li>
                     <li><a href="#galeria">Galeria</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#contato" class="btn-menu">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- BANNER PRINCIPAL -->
     <section id="inicio" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
+        <div class="container hero-content fade-in">
+            <span class="badge badge-accent">Tradição & Inovação</span>
             <h2>Construindo o Futuro no Campo</h2>
-            <p>Ensino Fundamental e Médio focado no desenvolvimento acadêmico, humano e comunitário.</p>
+            <p>Ensino Fundamental e Médio voltado ao desenvolvimento acadêmico, humano e comunitário.</p>
             <div class="hero-btns">
                 <a href="#eventos" class="btn btn-primary">Próximos Eventos</a>
-                <a href="#contato" class="btn btn-outline">Fale Conosco</a>
+                <a href="#sobre" class="btn btn-outline">Conheça o Colégio</a>
             </div>
         </div>
     </section>
 
-    <!-- SOBRE O COLÉGIO -->
     <section id="sobre" class="section">
         <div class="container grid-2">
-            <div>
+            <div class="animate-on-scroll">
                 <span class="badge">Nossa História</span>
-                <h2 class="title-section">Tradição e Educação de Qualidade</h2>
-                <p>O Colégio Estadual do Campo Irmã Ambrósia Sabatovich é um pilar no ensino rural. Dedicado a formar cidadãos conscientes, valorizamos a integração da comunidade local com práticas educacionais modernas.</p>
+                <h2 class="title-section">Educação e Valores Comunitários</h2>
+                <p>O Colégio Estadual do Campo Irmã Ambrósia Sabatovich une tradição educacional ao compromisso social. Nossa Proposta Pedagógica estimula o protagonismo juvenil e o aprendizado integrado à vida no campo.</p>
                 <ul class="list-features">
-                    <li>✓ Salas de aula adaptadas e equipadas</li>
-                    <li>✓ Projetos voltados à comunidade do campo</li>
-                    <li>✓ Acompanhamento pedagógico contínuo</li>
+                    <li>✓ Ensino Fundamental e Médio integrados</li>
+                    <li>✓ Acompanhamento pedagógico personalizado</li>
+                    <li>✓ Estrutura adaptada para atividades práticas</li>
                 </ul>
             </div>
-            <div class="about-card">
-                <h3>Estrutura Integrada</h3>
-                <p>Ambientes focados em aprendizado prático, esportes, lazer e convivência para o Ensino Fundamental e Médio.</p>
+            <div class="about-card animate-on-scroll">
+                <h3>Formação Integral</h3>
+                <p>Projetos contínuos de incentivo ao conhecimento, sustentabilidade e cultura local.</p>
             </div>
         </div>
     </section>
 
-    <!-- EQUIPE E FUNCIONÁRIOS -->
     <section id="equipe" class="section bg-celeste">
-        <div class="container">
-            <div class="text-center">
-                <span class="badge">Quem Faz Acontecer</span>
-                <h2 class="title-section">Professores e Colaboradores</h2>
-            </div>
+        <div class="container text-center">
+            <span class="badge">Quem Faz Acontecer</span>
+            <h2 class="title-section">Professores e Funcionários</h2>
 
-            <!-- Filtro Interativo -->
             <div class="filter-buttons">
-                <button class="filter-btn active" onclick="filtrarEquipe('todos')">Todos</button>
-                <button class="filter-btn" onclick="filtrarEquipe('docente')">Professores</button>
-                <button class="filter-btn" onclick="filtrarEquipe('gestao')">Gestão / Pedagógico</button>
-                <button class="filter-btn" onclick="filtrarEquipe('apoio')">Funcionários / Apoio</button>
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="docente">Professores</button>
+                <button class="filter-btn" data-filter="gestao">Gestão & Pedagógico</button>
+                <button class="filter-btn" data-filter="apoio">Funcionários & Apoio</button>
             </div>
 
             <div class="grid-equipe">
-                <!-- Exemplo Docente -->
-                <div class="card-membro docente">
+                <div class="card-membro docente animate-on-scroll">
                     <div class="foto-perfil"><span>Foto</span></div>
                     <h3>Nome do Professor</h3>
                     <span class="cargo">Disciplina / Área</span>
-                    <p>Dedicação ao ensino interativo e acompanhamento dos alunos.</p>
+                    <p>Metodologias ativas e acompanhamento pedagógico contínuo.</p>
                 </div>
-                <!-- Exemplo Gestão -->
-                <div class="card-membro gestao">
+                <div class="card-membro gestao animate-on-scroll">
                     <div class="foto-perfil"><span>Foto</span></div>
                     <h3>Nome do Gestor</h3>
                     <span class="cargo">Direção / Coordenação</span>
-                    <p>Garantindo a excelência administrativa e pedagógica do C.E.I.A.S.</p>
+                    <p>Gestão participativa focada na excelência educacional.</p>
                 </div>
-                <!-- Exemplo Apoio -->
-                <div class="card-membro apoio">
+                <div class="card-membro apoio animate-on-scroll">
                     <div class="foto-perfil"><span>Foto</span></div>
                     <h3>Nome do Funcionário</h3>
                     <span class="cargo">Secretaria / Apoio</span>
-                    <p>Suporte essencial para a rotina e o bem-estar escolar.</p>
+                    <p>Dedicação diária no suporte administrativo e convivência escolar.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO DE EVENTOS -->
     <section id="eventos" class="section">
         <div class="container">
             <div class="text-center">
@@ -113,81 +102,59 @@
             </div>
 
             <div class="grid-eventos">
-                <!-- Card Evento Principal -->
-                <div class="card-evento destaque">
+                <div class="card-evento destaque animate-on-scroll">
                     <div class="tag-evento">Em Breve</div>
                     <h3>🌸 Primavera Fest</h3>
-                    <p class="data-evento">📅 Celebração de Primavera</p>
-                    <p>Nosso tradicional evento comunitário com apresentações culturais, brinquedos, comidas típicas e integração entre alunos e famílias.</p>
+                    <p class="data-evento">📅 Celebração da Primavera</p>
+                    <p>Evento com apresentações culturais, brincadeiras, comida típica e integração das famílias.</p>
                 </div>
-
-                <div class="card-evento">
+                <div class="card-evento animate-on-scroll">
                     <div class="tag-evento secundario">Anual</div>
                     <h3>🔬 Feira do Conhecimento</h3>
-                    <p class="data-evento">📅 Exposição Escolar</p>
-                    <p>Apresentação de projetos científicos e práticos focados em tecnologia e realidade do campo.</p>
+                    <p class="data-evento">📅 Projetos Científicos</p>
+                    <p>Exposição de trabalhos acadêmicos e projetos voltados à comunidade local.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- GALERIA -->
     <section id="galeria" class="section bg-celeste">
         <div class="container text-center">
             <span class="badge">Registros</span>
-            <h2 class="title-section">Galeria do Colégio</h2>
+            <h2 class="title-section">Galeria de Fotos</h2>
             <div class="grid-galeria">
-                <div class="item-galeria"><span>Instalações</span></div>
-                <div class="item-galeria"><span>Projetos</span></div>
-                <div class="item-galeria"><span>Primavera Fest</span></div>
-                <div class="item-galeria"><span>Esportes</span></div>
+                <div class="item-galeria animate-on-scroll"><span>Estrutura Escolar</span></div>
+                <div class="item-galeria animate-on-scroll"><span>Projetos de Campo</span></div>
+                <div class="item-galeria animate-on-scroll"><span>Primavera Fest</span></div>
+                <div class="item-galeria animate-on-scroll"><span>Atividades Esportivas</span></div>
             </div>
         </div>
     </section>
 
-    <!-- CONTATO E LOCALIZAÇÃO -->
     <section id="contato" class="section">
         <div class="container grid-2">
-            <div>
-                <span class="badge">Fale Conosco</span>
-                <h2 class="title-section">Localização e Contato</h2>
+            <div class="animate-on-scroll">
+                <span class="badge">Atendimento</span>
+                <h2 class="title-section">Contato e Localização</h2>
                 <div class="info-box">
-                    <p><strong>📍 Endereço:</strong> Área Rural - Colégio do Campo</p>
+                    <p><strong>📍 Endereço:</strong> Área Rural, Colégio do Campo</p>
                     <p><strong>📞 Telefone:</strong> (00) 0000-0000</p>
                     <p><strong>✉️ E-mail:</strong> contato@ceias.edu.br</p>
                 </div>
             </div>
-            <div class="map-box">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3600.000000000000!2d-49.0000000!3d-25.0000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDAwJzAwLjAiUyA0OcKwMDAnMDAuMCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890" width="100%" height="250" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"></iframe>
+            <div class="map-box animate-on-scroll">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3600.000000000000!2d-49.0000000!3d-25.0000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDAwJzAwLjAiUyA0OcKwMDAnMDAuMCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890" width="100%" height="280" style="border:0; border-radius:16px;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
 
-    <!-- RODAPÉ -->
     <footer>
         <div class="container text-center">
-            <p>&copy; 2026 C.E.I.A.S. - Colégio Estadual do Campo Irmã Ambrósia Sabatovich.</p>
+            <p>© 2026 C.E.I.A.S. - Colégio Estadual do Campo Irmã Ambrósia Sabatovich.</p>
             <p><small>"Educando para a Comunidade"</small></p>
         </div>
     </footer>
 
-    <!-- SCRIPT SIMPLES PARA INTERAÇÃO DOS FILTROS -->
-    <script>
-        function filtrarEquipe(categoria) {
-            const cards = document.querySelectorAll('.card-membro');
-            const btns = document.querySelectorAll('.filter-btn');
-
-            btns.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-
-            cards.forEach(card => {
-                if (categoria === 'todos' || card.classList.contains(categoria)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
