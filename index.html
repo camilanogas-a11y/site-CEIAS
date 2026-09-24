@@ -3,411 +3,925 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Colégio Estadual do Campo Irmã Ambrósia Sabatovich (C.E.I.A.S.) - Educando para a Comunidade. Ensino Fundamental e Médio público, inovador e integrado à comunidade.">
-    <title>C.E.I.A.S. | Colégio Estadual do Campo Irmã Ambrósia Sabatovich</title>
-    
-    <!-- Google Fonts -->
+
+    <meta name="description"
+        content="Colégio Estadual do Campo Irmão Ambrosio Sabatowich — Educando para a Comunidade.">
+
+    <title>Colégio Estadual do Campo Irmão Ambrosio Sabatowich</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- CSS Modularizado -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/animations.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- Canvas de Aquarela em Background -->
-    <div class="watercolor-bg-wrapper" aria-hidden="true">
-        <div class="watercolor-blob blob-blue"></div>
-        <div class="watercolor-blob blob-red"></div>
-        <div class="watercolor-blob blob-yellow"></div>
-        <div class="watercolor-texture"></div>
-    </div>
+    <!-- ================= HEADER ================= -->
 
-    <!-- Intro Animation / Splash Screen -->
-    <div id="splash-screen" class="splash-screen">
-        <div class="splash-content">
-            <div class="splash-logo">C.E.I.A.S.</div>
-            <div class="splash-stars">✦ ✦ ✦ ✦ ✦</div>
-            <p class="splash-motto">Educando para a Comunidade</p>
-        </div>
-    </div>
+    <header id="header">
 
-    <!-- Header / Nav -->
-    <header class="main-header" id="header">
-        <div class="container header-container">
-            <a href="#hero" class="brand-logo" aria-label="Ir para o início">
-                <div class="logo-fallback">
-                    <span class="logo-acronym">C.E.I.A.S.</span>
-                    <span class="logo-star-badge">★</span>
+        <div class="container nav">
+
+            <a href="#inicio" class="logo-area">
+
+                <!-- Troque pelo nome da sua imagem -->
+                <img src="logo.png" alt="Logo do Colégio">
+
+                <div class="logo-text">
+                    <strong>
+                        Colégio Estadual do Campo
+                        <br>
+                        Irmão Ambrosio Sabatowich
+                    </strong>
+
+                    <span>Educando para a Comunidade</span>
                 </div>
+
             </a>
 
-            <nav class="main-nav" id="main-nav">
-                <ul class="nav-list">
-                    <li><a href="#hero" class="nav-link active">Início</a></li>
-                    <li><a href="#sobre" class="nav-link">O Colégio</a></li>
-                    <li><a href="#proposta" class="nav-link">Proposta</a></li>
-                    <li><a href="#espacos" class="nav-link">Espaços</a></li>
-                    <li><a href="#alunos" class="nav-link">Estudantes</a></li>
-                    <li><a href="#eventos" class="nav-link">Eventos</a></li>
-                    <li><a href="#galeria" class="nav-link">Galeria</a></li>
-                    <li><a href="#familia" class="nav-link">Família</a></li>
-                    <li><a href="#contato" class="nav-link">Contato</a></li>
-                </ul>
+            <nav id="menu">
+
+                <a href="#inicio">Início</a>
+                <a href="#colegio">O Colégio</a>
+                <a href="#proposta">Proposta</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#eventos">Eventos</a>
+                <a href="#familia">Família</a>
+                <a href="#contato">Contato</a>
+
             </nav>
 
-            <div class="header-actions">
-                <a href="#familia" class="btn btn-primary-highlight">Matrícula & Vagas</a>
-                <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir Menu">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
+            <a href="#familia" class="btn btn-primary nav-btn">
+                Matrícula
+            </a>
+
+            <button class="menu-button" id="menuButton">
+                ☰
+            </button>
+
         </div>
+
     </header>
 
-    <main id="main-content">
 
-        <!-- Hero Section -->
-        <section id="hero" class="hero-section">
+    <main>
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero" id="inicio">
+
+            <div class="watercolor watercolor-blue"></div>
+            <div class="watercolor watercolor-yellow"></div>
+            <div class="watercolor watercolor-red"></div>
+
             <div class="container hero-grid">
-                <div class="hero-text-content">
-                    <div class="badge-tag">✦ Educação • Cultura • Comunidade</div>
-                    <h1 class="hero-title">
-                        Colégio Estadual do Campo <br>
-                        <span class="text-gradient">Irmã Ambrósia Sabatovich</span>
+
+                <div class="hero-content reveal">
+
+                    <span class="eyebrow">
+                        Educação • Cultura • Comunidade
+                    </span>
+
+                    <h1>
+                        Educando para a
+                        <span>Comunidade.</span>
                     </h1>
-                    <p class="hero-motto">“Educando para a Comunidade”</p>
-                    <p class="hero-description">
-                        Uma experiência educacional pública viva, humana e transformadora. Aqui, a tradição do campo e a visão de futuro se encontram para formar cidadãos críticos e criativos.
+
+                    <p>
+                        Um espaço para aprender, criar, compartilhar
+                        experiências e construir juntos um futuro cheio
+                        de possibilidades.
                     </p>
+
                     <div class="hero-buttons">
-                        <a href="#sobre" class="btn btn-primary">Conheça o Colégio</a>
-                        <a href="#eventos" class="btn btn-outline">Ver Eventos</a>
+
+                        <a href="#colegio" class="btn btn-primary">
+                            Conheça o colégio
+                            <span>→</span>
+                        </a>
+
+                        <a href="#eventos" class="btn btn-outline">
+                            Conheça nossos eventos
+                        </a>
+
                     </div>
+
+                    <div class="hero-info">
+
+                        <div>
+                            <strong>✦</strong>
+                            <span>Educação</span>
+                        </div>
+
+                        <div>
+                            <strong>✦</strong>
+                            <span>Cultura</span>
+                        </div>
+
+                        <div>
+                            <strong>✦</strong>
+                            <span>Comunidade</span>
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <div class="hero-media-content">
-                    <div class="hero-image-frame">
-                        <div class="watercolor-frame-art"></div>
-                        <div class="image-placeholder hero-img">
-                            <div class="placeholder-content">
-                                <span>✦ Espaço Aberto e Sustentável ✦</span>
-                                <p>[FOTO OFICIAL DA INFRAESTRUTURA DA ESCOLA]</p>
+
+                <div class="hero-visual reveal">
+
+                    <div class="paint-shape"></div>
+
+                    <div class="hero-photo">
+
+                        <!-- Coloque uma foto da escola -->
+                        <img
+                            src="escola.jpg"
+                            alt="Espaço do Colégio"
+                            onerror="this.style.display='none'"
+                        >
+
+                        <div class="photo-fallback">
+                            <span>✦</span>
+                            <strong>
+                                Nossa escola,
+                                nossa comunidade.
+                            </strong>
+                        </div>
+
+                    </div>
+
+                    <span class="star star-one">★</span>
+                    <span class="star star-two">★</span>
+                    <span class="star star-three">★</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= O COLÉGIO ================= -->
+
+        <section id="colegio" class="section">
+
+            <div class="container">
+
+                <div class="section-title reveal">
+
+                    <span class="eyebrow">
+                        O Colégio
+                    </span>
+
+                    <h2>
+                        Um lugar para
+                        <span>pertencer.</span>
+                    </h2>
+
+                    <p>
+                        Conheça um pouco da nossa identidade,
+                        nossa história e o que torna nossa escola
+                        especial.
+                    </p>
+
+                </div>
+
+
+                <div class="about-grid">
+
+                    <div class="about-image card reveal">
+
+                        <img
+                            src="escola.jpg"
+                            alt="Colégio"
+                            onerror="this.style.display='none'"
+                        >
+
+                        <div class="image-placeholder">
+                            <span>✦</span>
+                            <strong>Foto do colégio</strong>
+                            <small>
+                                Adicione aqui uma imagem oficial.
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="about-content reveal">
+
+                        <span class="mini-label">
+                            NOSSA IDENTIDADE
+                        </span>
+
+                        <h3>
+                            Educação que nasce
+                            da comunidade.
+                        </h3>
+
+                        <p>
+                            Este espaço pode apresentar a história
+                            oficial do Colégio Estadual do Campo
+                            Irmão Ambrosio Sabatowich.
+                        </p>
+
+                        <p>
+                            Aqui também podem ser apresentados
+                            os princípios, projetos, objetivos
+                            e características da instituição.
+                        </p>
+
+
+                        <div class="values">
+
+                            <div class="value">
+                                <span>✦</span>
+                                <div>
+                                    <strong>Comunidade</strong>
+                                    <p>
+                                        Escola e famílias caminhando juntas.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="value">
+                                <span>✦</span>
+                                <div>
+                                    <strong>Conhecimento</strong>
+                                    <p>
+                                        Aprender para transformar.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="value">
+                                <span>✦</span>
+                                <div>
+                                    <strong>Cultura</strong>
+                                    <p>
+                                        Valorizar experiências e histórias.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="value">
+                                <span>✦</span>
+                                <div>
+                                    <strong>Futuro</strong>
+                                    <p>
+                                        Preparação para novos caminhos.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROPOSTA ================= -->
+
+        <section id="proposta" class="section section-blue">
+
+            <div class="container">
+
+                <div class="section-title center reveal">
+
+                    <span class="eyebrow">
+                        Nossa proposta
+                    </span>
+
+                    <h2>
+                        Aprender é
+                        <span>transformar.</span>
+                    </h2>
+
+                    <p>
+                        Um ambiente que estimula conhecimento,
+                        criatividade, participação e pertencimento.
+                    </p>
+
+                </div>
+
+
+                <div class="cards-grid">
+
+                    <article class="feature-card reveal">
+
+                        <div class="feature-icon">✦</div>
+
+                        <h3>Conhecimento</h3>
+
+                        <p>
+                            Construção de conhecimentos para
+                            compreender o mundo e participar dele.
+                        </p>
+
+                    </article>
+
+
+                    <article class="feature-card reveal">
+
+                        <div class="feature-icon red">✎</div>
+
+                        <h3>Criatividade</h3>
+
+                        <p>
+                            Espaço para imaginar, experimentar,
+                            criar e desenvolver novas ideias.
+                        </p>
+
+                    </article>
+
+
+                    <article class="feature-card reveal">
+
+                        <div class="feature-icon yellow">◎</div>
+
+                        <h3>Comunidade</h3>
+
+                        <p>
+                            Uma escola conectada com seus estudantes,
+                            famílias e comunidade.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= GALERIA ================= -->
+
+        <section id="galeria" class="section">
+
+            <div class="container">
+
+                <div class="section-title reveal">
+
+                    <span class="eyebrow">
+                        Galeria
+                    </span>
+
+                    <h2>
+                        A escola em
+                        <span>movimento.</span>
+                    </h2>
+
+                    <p>
+                        Um espaço para registrar os momentos,
+                        projetos e ambientes da nossa escola.
+                    </p>
+
+                </div>
+
+
+                <div class="gallery">
+
+                    <div class="gallery-item large reveal">
+                        <img src="foto1.jpg" alt="Foto da escola">
+                        <span>Nosso colégio</span>
+                    </div>
+
+                    <div class="gallery-item reveal">
+                        <img src="foto2.jpg" alt="Atividade escolar">
+                        <span>Projetos</span>
+                    </div>
+
+                    <div class="gallery-item reveal">
+                        <img src="foto3.jpg" alt="Atividade escolar">
+                        <span>Atividades</span>
+                    </div>
+
+                    <div class="gallery-item reveal">
+                        <img src="foto4.jpg" alt="Espaço escolar">
+                        <span>Espaços</span>
+                    </div>
+
+                    <div class="gallery-item reveal">
+                        <img src="foto5.jpg" alt="Evento escolar">
+                        <span>Momentos</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= EVENTOS ================= -->
+
+        <section id="eventos" class="section events-section">
+
+            <div class="container">
+
+                <div class="section-title center reveal">
+
+                    <span class="eyebrow">
+                        Eventos
+                    </span>
+
+                    <h2>
+                        Momentos que ficam
+                        <span>na memória.</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="events-grid">
+
+
+                    <article class="event-card spring reveal">
+
+                        <div class="event-decoration">
+                            ✦
+                        </div>
+
+                        <div class="event-icon">
+                            🌼
+                        </div>
+
+                        <span>EVENTO ESPECIAL</span>
+
+                        <h3>
+                            Primavera Fest
+                        </h3>
+
+                        <p>
+                            Um momento de celebração,
+                            integração, cultura e alegria
+                            envolvendo nossa comunidade escolar.
+                        </p>
+
+                        <button
+                            class="btn btn-white event-button"
+                            data-event="primavera"
+                        >
+                            Saiba mais →
+                        </button>
+
+                    </article>
+
+
+                    <article class="event-card cultural reveal">
+
+                        <div class="event-decoration">
+                            ★
+                        </div>
+
+                        <div class="event-icon">
+                            🎨
+                        </div>
+
+                        <span>CULTURA</span>
+
+                        <h3>
+                            Semana Cultural
+                        </h3>
+
+                        <p>
+                            Uma semana dedicada à cultura,
+                            criatividade, conhecimento e
+                            participação dos estudantes.
+                        </p>
+
+                        <button
+                            class="btn btn-white event-button"
+                            data-event="cultural"
+                        >
+                            Ver programação →
+                        </button>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FAMÍLIA ================= -->
+
+        <section id="familia" class="section section-blue">
+
+            <div class="container">
+
+                <div class="section-title reveal">
+
+                    <span class="eyebrow">
+                        Espaço da família
+                    </span>
+
+                    <h2>
+                        Escola e família,
+                        <span>juntas.</span>
+                    </h2>
+
+                    <p>
+                        Um espaço pensado para facilitar o acesso
+                        às informações e aproximar as famílias da escola.
+                    </p>
+
+                </div>
+
+
+                <div class="family-grid">
+
+                    <div class="family-card reveal">
+
+                        <span class="mini-label">
+                            INFORMAÇÕES
+                        </span>
+
+                        <h3>
+                            O que você procura?
+                        </h3>
+
+                        <div class="family-links">
+
+                            <a href="#contato">
+                                <span>📞</span>
+                                Falar com a escola
+                            </a>
+
+                            <a href="#contato">
+                                <span>📋</span>
+                                Documentos
+                            </a>
+
+                            <a href="#eventos">
+                                <span>📅</span>
+                                Calendário e eventos
+                            </a>
+
+                            <a href="#matricula">
+                                <span>📝</span>
+                                Matrícula
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="family-card highlight reveal" id="matricula">
+
+                        <span class="mini-label">
+                            COLÉGIO PÚBLICO
+                        </span>
+
+                        <h3>
+                            Informações de matrícula
+                        </h3>
+
+                        <p>
+                            Consulte aqui as orientações oficiais
+                            sobre matrícula, documentação e
+                            ingresso no colégio.
+                        </p>
+
+                        <div class="notice">
+                            <strong>Importante</strong>
+                            <span>
+                                Insira aqui somente informações
+                                oficiais da escola ou da rede de ensino.
+                            </span>
+                        </div>
+
+                        <a href="#contato" class="btn btn-primary">
+                            Tirar dúvidas →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= LOCALIZAÇÃO ================= -->
+
+        <section class="section location-section">
+
+            <div class="container location-grid">
+
+                <div class="location-text reveal">
+
+                    <span class="eyebrow">
+                        Localização
+                    </span>
+
+                    <h2>
+                        Venha conhecer
+                        <span>a escola.</span>
+                    </h2>
+
+                    <p>
+                        Encontre aqui o endereço oficial,
+                        telefone e demais informações de contato
+                        do colégio.
+                    </p>
+
+                    <div class="location-info">
+
+                        <div>
+                            <span>📍</span>
+                            <div>
+                                <strong>Endereço</strong>
+                                <p>
+                                    Insira aqui o endereço oficial.
+                                </p>
                             </div>
                         </div>
-                        <div class="hero-badge-floating">
-                            <span class="star-accent">★</span>
-                            <p>Ensino Fundamental & Médio</p>
+
+                        <div>
+                            <span>☎</span>
+                            <div>
+                                <strong>Telefone</strong>
+                                <p>
+                                    Insira aqui o telefone oficial.
+                                </p>
+                            </div>
                         </div>
+
                     </div>
+
                 </div>
+
+
+                <div class="map-card reveal">
+
+                    <div class="map-placeholder">
+
+                        <span>📍</span>
+
+                        <strong>
+                            Localização do colégio
+                        </strong>
+
+                        <small>
+                            O mapa pode ser incorporado
+                            aqui posteriormente.
+                        </small>
+
+                    </div>
+
+                </div>
+
             </div>
+
         </section>
 
-        <!-- Seção: O Colégio -->
-        <section id="sobre" class="section-padding bg-alt">
+
+        <!-- ================= CONTATO ================= -->
+
+        <section id="contato" class="section contact-section">
+
             <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-subtitle">✦ Pertencimento e Identidade</span>
-                    <h2 class="section-title">Uma escola que pertence à comunidade</h2>
-                    <p class="section-intro">
-                        Construído no coração da nossa terra, o C.E.I.A.S. vai além da sala de aula tradicional: somos um polo de saberes, cultura, cidadania e transformação social no campo.
-                    </p>
+
+                <div class="section-title center reveal">
+
+                    <span class="eyebrow">
+                        Fale conosco
+                    </span>
+
+                    <h2>
+                        Estamos aqui para
+                        <span>conversar.</span>
+                    </h2>
+
                 </div>
 
-                <div class="editorial-grid">
-                    <div class="editorial-card text-block">
-                        <h3>Educando para a Comunidade. <br>Aprendendo com a Comunidade.</h3>
-                        <p>Nossa missão é garantir um ensino público de excelência, fundamentado na ética, no diálogo, no respeito às raízes locais e na autonomia dos nossos estudantes.</p>
-                        <ul class="star-bullets">
-                            <li>✦ Valorização da Cultura e Identidade do Campo</li>
-                            <li>✦ Estímulo ao Pensamento Crítico e Científico</li>
-                            <li>✦ Gestão Democrática e Participativa</li>
-                        </ul>
-                    </div>
-                    <div class="editorial-card image-block">
-                        <div class="image-placeholder flex-center">
-                            <p>[FOTO OFICIAL: AMBIENTE ESCOLAR / CONVIVÊNCIA]</p>
+
+                <div class="contact-grid">
+
+                    <div class="contact-info reveal">
+
+                        <h3>
+                            Entre em contato
+                        </h3>
+
+                        <p>
+                            Para dúvidas, informações ou atendimento,
+                            utilize os canais oficiais da escola.
+                        </p>
+
+                        <div class="contact-item">
+                            <span>✉</span>
+                            <div>
+                                <strong>E-mail</strong>
+                                <p>
+                                    contato@colegio.edu.br
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Seção: Proposta Pedagógica -->
-        <section id="proposta" class="section-padding">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-subtitle">✦ Visão de Futuro</span>
-                    <h2 class="section-title">Aprender é transformar</h2>
-                </div>
-
-                <div class="cards-grid-3">
-                    <article class="interactive-card">
-                        <div class="card-icon">✦</div>
-                        <h3>Conhecimento & Campo</h3>
-                        <p>Integração entre as disciplinas da base nacional comum e os saberes práticos e sustentáveis da nossa região.</p>
-                    </article>
-
-                    <article class="interactive-card card-accent-red">
-                        <div class="card-icon">✦</div>
-                        <h3>Criatividade & Arte</h3>
-                        <p>Incentivo às manifestações culturais, projetos expressivos, oficinas de música, teatro e artes visuais.</p>
-                    </article>
-
-                    <article class="interactive-card card-accent-yellow">
-                        <div class="card-icon">✦</div>
-                        <h3>Cidadania & Futuro</h3>
-                        <p>Ações voltadas ao protagonismo jovem, à consciência ambiental, ao respeito à diversidade e ao bem-estar coletivo.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção: Espaços do Colégio -->
-        <section id="espacos" class="section-padding bg-alt">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-subtitle">✦ Infraestrutura</span>
-                    <h2 class="section-title">Por dentro da nossa escola</h2>
-                    <p>Ambientes projetados para o aprendizado prático, a convivência e a integração com a natureza.</p>
-                </div>
-
-                <div class="spaces-grid">
-                    <div class="space-card">
-                        <div class="image-placeholder">[FOTO: SALAS DE AULA]</div>
-                        <div class="space-info">
-                            <h3>Salas de Aula Amplas</h3>
-                            <p>Espaços arejados e equipados para dinâmicas em grupo.</p>
+                        <div class="contact-item">
+                            <span>☎</span>
+                            <div>
+                                <strong>Telefone</strong>
+                                <p>
+                                    (00) 00000-0000
+                                </p>
+                            </div>
                         </div>
+
                     </div>
-                    <div class="space-card">
-                        <div class="image-placeholder">[FOTO: BIBLIOTECA]</div>
-                        <div class="space-info">
-                            <h3>Acervo & Biblioteca</h3>
-                            <p>Espaço de leitura, pesquisa e desenvolvimento literário.</p>
+
+
+                    <form id="contactForm" class="contact-form reveal">
+
+                        <div class="input-row">
+
+                            <label>
+                                Nome
+                                <input
+                                    type="text"
+                                    name="nome"
+                                    placeholder="Seu nome"
+                                    required
+                                >
+                            </label>
+
+                            <label>
+                                E-mail
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="seu@email.com"
+                                    required
+                                >
+                            </label>
+
                         </div>
-                    </div>
-                    <div class="space-card">
-                        <div class="image-placeholder">[FOTO: QUADRA ESPORTIVA]</div>
-                        <div class="space-info">
-                            <h3>Esporte e Convivência</h3>
-                            <p>Quadra poliesportiva e áreas de lazer ao ar livre.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Seção: Espaço dos Alunos -->
-        <section id="alunos" class="section-padding">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-subtitle">✦ Protagonismo Estudantil</span>
-                    <h2 class="section-title">Espaço do Estudante</h2>
-                    <p>Aqui a voz, a arte e os projetos dos nossos alunos ganham o papel principal.</p>
-                </div>
 
-                <div class="students-showcase">
-                    <div class="showcase-card">
-                        <span class="tag">Feira de Ciências</span>
-                        <h3>Projetos de Agroecologia</h3>
-                        <p>Pesquisas desenvolvidas pelos estudantes focadas em soluções sustentáveis para o campo.</p>
-                    </div>
-                    <div class="showcase-card">
-                        <span class="tag">Cultura</span>
-                        <h3>Mostra de Expressão Artística</h3>
-                        <p>Exposição de murais, poesias e produções plásticas criadas durante as oficinas.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                        <label>
+                            Assunto
 
-        <!-- Seção Destaque: Eventos Especiais -->
-        <section id="eventos" class="section-padding special-events-section">
-            <div class="container">
-                <div class="section-header text-center text-white">
-                    <span class="section-subtitle gold-subtitle">✦ Tradição e Celebração</span>
-                    <h2 class="section-title">Nossos Grandes Eventos</h2>
-                </div>
+                            <select name="assunto">
 
-                <div class="events-dual-grid">
-                    <div class="event-featured-card primavera-fest-theme">
-                        <div class="event-badge">🌸 Evento Anual</div>
-                        <h3>Primavera Fest</h3>
-                        <p>Celebração da renovação, da natureza e dos talentos da escola com apresentações culturais, feiras temáticas e integração com as famílias.</p>
-                        <a href="#galeria" class="btn btn-small btn-gold">Ver Galeria do Evento</a>
-                    </div>
+                                <option>
+                                    Informações gerais
+                                </option>
 
-                    <div class="event-featured-card semana-cultural-theme">
-                        <div class="event-badge">🎭 Mostra Cultural</div>
-                        <h3>Semana Cultural</h3>
-                        <p>Uma imersão em arte, história, música, literatura e resgate das tradições locais com oficinas práticas e apresentações.</p>
-                        <a href="#galeria" class="btn btn-small btn-gold">Ver Programação</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+                                <option>
+                                    Matrícula
+                                </option>
 
-        <!-- Seção: Galeria de Fotos -->
-        <section id="galeria" class="section-padding">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-subtitle">✦ Memórias Vivas</span>
-                    <h2 class="section-title">A escola em movimento</h2>
-                </div>
+                                <option>
+                                    Atendimento
+                                </option>
 
-                <div class="gallery-filters">
-                    <button class="filter-btn active" data-filter="all">Todos</button>
-                    <button class="filter-btn" data-filter="espacos">Espaços</button>
-                    <button class="filter-btn" data-filter="projetos">Projetos</button>
-                    <button class="filter-btn" data-filter="eventos">Eventos</button>
-                </div>
+                                <option>
+                                    Eventos
+                                </option>
 
-                <div class="gallery-grid">
-                    <div class="gallery-item" data-category="espacos">
-                        <div class="image-placeholder">[FOTO 1: FACHADA / CAMPO]</div>
-                    </div>
-                    <div class="gallery-item large-item" data-category="eventos">
-                        <div class="image-placeholder">[FOTO 2: PRIMAVERA FEST]</div>
-                    </div>
-                    <div class="gallery-item" data-category="projetos">
-                        <div class="image-placeholder">[FOTO 3: PROJETO ESCOLAR]</div>
-                    </div>
-                    <div class="gallery-item" data-category="eventos">
-                        <div class="image-placeholder">[FOTO 4: SEMANA CULTURAL]</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção: Espaço da Família -->
-        <section id="familia" class="section-padding bg-alt">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-subtitle">✦ Parceria e Transparência</span>
-                    <h2 class="section-title">Espaço da Família</h2>
-                    <p>Informações claras sobre ingressos, transferências, renovações de matrícula pública e avisos importantes.</p>
-                </div>
-
-                <div class="family-accordion">
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <span>Como funciona a Matrícula na Rede Pública?</span>
-                            <span class="icon">+</span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>As matrículas e transferências para o Ensino Fundamental e Médio seguem o calendário oficial da Secretaria Estadual de Educação. Apresente na secretaria os documentos do estudante e comprovante de residência.</p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <span>Documentação Necessária</span>
-                            <span class="icon">+</span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Certidão de Nascimento/RG do aluno, Histórico Escolar, Comprovante de Residência atualizado, Cartão de Vacina e RG/CPF dos responsáveis.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção: Contato & Localização -->
-        <section id="contato" class="section-padding">
-            <div class="container grid-2-col">
-                <div class="contact-info">
-                    <span class="section-subtitle">✦ Atendimento e Visitas</span>
-                    <h2 class="section-title">Fale com a Escola</h2>
-                    <p>Entre em contato para agendar visitas ou esclarecer dúvidas diretamente com a nossa equipe.</p>
-
-                    <div class="info-details">
-                        <div class="info-item">
-                            <strong>📍 Endereço:</strong>
-                            <p>[INSERIR ENDEREÇO OFICIAL DO C.E.I.A.S.]</p>
-                        </div>
-                        <div class="info-item">
-                            <strong>📞 Telefone / Contato:</strong>
-                            <p>[INSERIR TELEFONE INSTITUCIONAL]</p>
-                        </div>
-                        <div class="info-item">
-                            <strong>✉️ E-mail:</strong>
-                            <p>[INSERIR E-MAIL INSTITUCIONAL]</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-form-wrapper">
-                    <form id="school-contact-form" class="styled-form">
-                        <div class="form-group">
-                            <label for="name">Nome Completo</label>
-                            <input type="text" id="name" required placeholder="Seu nome">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-mail ou Telefone</label>
-                            <input type="text" id="email" required placeholder="Seu contato">
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Assunto</label>
-                            <select id="subject">
-                                <option value="informacoes">Informações de Matrícula</option>
-                                <option value="atendimento">Atendimento Geral</option>
-                                <option value="documentos">Secretaria / Documentos</option>
-                                <option value="outros">Outros Assuntos</option>
                             </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Mensagem</label>
-                            <textarea id="message" rows="4" required placeholder="Escreva sua mensagem..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary full-width">Enviar Mensagem</button>
-                        <div id="form-feedback" class="form-feedback"></div>
+
+                        </label>
+
+
+                        <label>
+                            Mensagem
+
+                            <textarea
+                                name="mensagem"
+                                placeholder="Digite sua mensagem..."
+                                required
+                            ></textarea>
+
+                        </label>
+
+
+                        <button class="btn btn-primary" type="submit">
+                            Enviar mensagem →
+                        </button>
+
+                        <p id="formMessage" class="form-message"></p>
+
                     </form>
+
                 </div>
+
             </div>
+
         </section>
 
     </main>
 
-    <!-- Footer -->
-    <footer class="main-footer">
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
         <div class="container footer-grid">
-            <div class="footer-brand">
-                <div class="logo-acronym text-white">C.E.I.A.S.</div>
-                <p class="footer-motto">“Educando para a Comunidade”</p>
-                <p class="school-full-name">Colégio Estadual do Campo Irmã Ambrósia Sabatovich</p>
+
+            <div>
+
+                <img
+                    src="logo.png"
+                    alt="Logo do colégio"
+                    class="footer-logo"
+                >
+
+                <h3>
+                    Colégio Estadual do Campo
+                    <br>
+                    Irmão Ambrosio Sabatowich
+                </h3>
+
+                <p>
+                    Educando para a Comunidade.
+                </p>
+
             </div>
-            <div class="footer-links">
-                <h4>Navegação</h4>
-                <ul>
-                    <li><a href="#hero">Início</a></li>
-                    <li><a href="#sobre">O Colégio</a></li>
-                    <li><a href="#proposta">Proposta</a></li>
-                    <li><a href="#eventos">Eventos</a></li>
-                    <li><a href="#familia">Espaço da Família</a></li>
-                </ul>
+
+
+            <div>
+
+                <h4>Explorar</h4>
+
+                <a href="#colegio">O Colégio</a>
+                <a href="#proposta">Proposta</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#eventos">Eventos</a>
+
             </div>
-            <div class="footer-legal">
-                <h4>Transparência</h4>
-                <p>Escola Pública da Rede Estadual de Ensino.</p>
+
+
+            <div>
+
+                <h4>Comunidade</h4>
+
+                <a href="#familia">Família</a>
+                <a href="#matricula">Matrícula</a>
+                <a href="#contato">Contato</a>
+
             </div>
+
         </div>
-        <div class="footer-bottom">
-            <div class="container flex-between">
-                <p>&copy; 2026 C.E.I.A.S. - Todos os direitos reservados.</p>
-                <span class="star-signature">✦ ✦ ✦</span>
-            </div>
+
+
+        <div class="container copyright">
+
+            <span>
+                © <span id="year"></span>
+                Colégio Estadual do Campo Irmão Ambrosio Sabatowich
+            </span>
+
+            <span>
+                Educando para a Comunidade.
+            </span>
+
         </div>
+
     </footer>
 
-    <button id="back-to-top" class="back-to-top" aria-label="Voltar ao Topo">↑</button>
 
-    <!-- JavaScript Modularizado -->
-    <script src="js/main.js"></script>
-    <script src="js/gallery.js"></script>
+    <!-- MODAL DOS EVENTOS -->
+
+    <div class="modal" id="eventModal">
+
+        <div class="modal-box">
+
+            <button class="modal-close" id="closeModal">
+                ×
+            </button>
+
+            <div id="modalContent"></div>
+
+        </div>
+
+    </div>
+
+
+    <button id="topButton" class="top-button">
+        ↑
+    </button>
+
+
+    <script src="script.js"></script>
+
 </body>
 </html>

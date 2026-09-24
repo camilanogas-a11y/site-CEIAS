@@ -1,143 +1,319 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. Splash Screen Loader Acelerado
-    const splashScreen = document.getElementById('splash-screen');
-    setTimeout(() => {
-        if (splashScreen) {
-            splashScreen.classList.add('hidden');
-        }
-    }, 900);
+/* =====================================================
+   HEADER
+===================================================== */
 
-    // 2. Header Scroll Effect
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
+const header = document.getElementById("header");
 
-    // 3. Menu Mobile Toggle
-    const mobileToggle = document.getElementById('mobile-toggle');
-    const mainNav = document.getElementById('main-nav');
+window.addEventListener("scroll", () => {
 
-    if (mobileToggle) {
-        mobileToggle.addEventListener('click', () => {
-            mainNav.classList.toggle('open');
-            mobileToggle.classList.toggle('active');
-        });
+    if (window.scrollY > 40) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
     }
 
-    // 4. Accordion Interativo (Espaço da Família)
-    const accordionHeaders = document.querySelectorAll('.accordion-header');
-    accordionHeaders.forEach(header => {
-        header.addEventListener('click', () => {
-            const item = header.parentElement;
-            item.classList.toggle('active');
-            
-            const icon = header.querySelector('.icon');
-            if (icon) {
-                icon.textContent = item.classList.contains('active') ? '−' : '+';
+});
+
+
+/* =====================================================
+   MENU MOBILE
+===================================================== */
+
+const menuButton =
+    document.getElementById("menuButton");
+
+const menu =
+    document.getElementById("menu");
+
+
+menuButton.addEventListener("click", () => {
+
+    const aberto =
+        menu.classList.toggle("mobile-open");
+
+    if (aberto) {
+
+        menu.style.display = "flex";
+
+        menu.style.position = "fixed";
+
+        menu.style.top = "82px";
+
+        menu.style.left = "14px";
+
+        menu.style.right = "14px";
+
+        menu.style.padding = "25px";
+
+        menu.style.flexDirection = "column";
+
+        menu.style.alignItems = "flex-start";
+
+        menu.style.background =
+            "rgba(255,253,248,.98)";
+
+        menu.style.borderRadius = "24px";
+
+        menu.style.boxShadow =
+            "0 20px 60px rgba(16,35,63,.18)";
+
+    } else {
+
+        menu.removeAttribute("style");
+
+    }
+
+});
+
+
+/* Fecha o menu quando clicar em algum link */
+
+document
+    .querySelectorAll("#menu a")
+    .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            menu.classList.remove("mobile-open");
+
+            if (window.innerWidth <= 1050) {
+                menu.removeAttribute("style");
             }
+
         });
+
     });
 
-    // 5. Validação do Formulário de Contato
-    const contactForm = document.getElementById('school-contact-form');
-    const formFeedback = document.getElementById('form-feedback');
 
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            formFeedback.innerHTML = '<p style="color: green; margin-top: 10px;">✦ Mensagem enviada com sucesso! A equipe pedagógica retornará em breve.</p>';
-            contactForm.reset();
-        });
-    }
-});
-document.addEventListener('DOMContentLoaded', () => {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const galleryItems = document.querySelectorAll('.gallery-item');
+/* =====================================================
+   ANIMAÇÕES AO ROLAR
+===================================================== */
 
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
+const observer =
+    new IntersectionObserver(
+        entries => {
 
-            const filterValue = button.getAttribute('data-filter');
+            entries.forEach(entry => {
 
-            galleryItems.forEach(item => {
-                if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("visible");
+
                 }
+
             });
-        });
-    });
-});
-document.addEventListener('DOMContentLoaded', () => {
-    // Esconde a tela de Splash rapidamente
-    const splashScreen = document.getElementById('splash-screen');
-    setTimeout(() => {
-        if (splashScreen) {
-            splashScreen.classList.add('hidden');
+
+        },
+        {
+            threshold: 0.12
         }
-    }, 800);
+    );
 
-    // Efeito de sombra no Header ao rolar
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 40) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
+
+document
+    .querySelectorAll(".reveal")
+    .forEach(element => {
+
+        observer.observe(element);
+
     });
 
-    // Accordion do Espaço da Família
-    const accordionHeaders = document.querySelectorAll('.accordion-header');
-    accordionHeaders.forEach(header => {
-        header.addEventListener('click', () => {
-            const item = header.parentElement;
-            item.classList.toggle('active');
-            
-            const icon = header.querySelector('.icon');
-            if (icon) {
-                icon.textContent = item.classList.contains('active') ? '−' : '+';
-            }
-        });
-    });
 
-    // Envio do formulário de contato
-    const contactForm = document.getElementById('school-contact-form');
-    const formFeedback = document.getElementById('form-feedback');
+/* =====================================================
+   MODAL DOS EVENTOS
+===================================================== */
 
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            formFeedback.innerHTML = '<p style="color: green; font-weight: bold; margin-top: 10px;">✦ Mensagem recebida! Retornaremos o contato em breve.</p>';
-            contactForm.reset();
-        });
+const modal =
+    document.getElementById("eventModal");
+
+const modalContent =
+    document.getElementById("modalContent");
+
+const closeModal =
+    document.getElementById("closeModal");
+
+
+const eventos = {
+
+    primavera: {
+
+        titulo: "🌼 Primavera Fest",
+
+        texto:
+            "Aqui você pode colocar a programação oficial, " +
+            "data, horário, atividades, apresentações e demais " +
+            "informações do Primavera Fest."
+    },
+
+    cultural: {
+
+        titulo: "🎨 Semana Cultural",
+
+        texto:
+            "Aqui você pode apresentar a programação oficial " +
+            "da Semana Cultural, incluindo apresentações, " +
+            "oficinas, exposições, projetos e atividades."
     }
-});
-document.addEventListener('DOMContentLoaded', () => {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const galleryItems = document.querySelectorAll('.gallery-item');
 
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
+};
 
-            const filterValue = button.getAttribute('data-filter');
 
-            galleryItems.forEach(item => {
-                if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
+document
+    .querySelectorAll(".event-button")
+    .forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const evento =
+                button.dataset.event;
+
+            const dados =
+                eventos[evento];
+
+            modalContent.innerHTML = `
+
+                <span class="eyebrow">
+                    EVENTO DO COLÉGIO
+                </span>
+
+                <h3>
+                    ${dados.titulo}
+                </h3>
+
+                <p>
+                    ${dados.texto}
+                </p>
+
+                <br>
+
+                <p>
+                    <strong>
+                        Em breve:
+                    </strong>
+                    programação completa.
+                </p>
+
+            `;
+
+            modal.classList.add("active");
+
         });
+
     });
+
+
+closeModal.addEventListener("click", () => {
+
+    modal.classList.remove("active");
+
 });
+
+
+modal.addEventListener("click", event => {
+
+    if (event.target === modal) {
+
+        modal.classList.remove("active");
+
+    }
+
+});
+
+
+/* =====================================================
+   FORMULÁRIO
+===================================================== */
+
+const form =
+    document.getElementById("contactForm");
+
+const formMessage =
+    document.getElementById("formMessage");
+
+
+form.addEventListener("submit", event => {
+
+    event.preventDefault();
+
+    formMessage.textContent =
+        "Mensagem preenchida com sucesso! " +
+        "Para receber mensagens de verdade, " +
+        "será necessário conectar este formulário " +
+        "a um serviço de envio ou backend.";
+
+    formMessage.classList.add("show");
+
+    form.reset();
+
+});
+
+
+/* =====================================================
+   BOTÃO VOLTAR AO TOPO
+===================================================== */
+
+const topButton =
+    document.getElementById("topButton");
+
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 500) {
+
+        topButton.classList.add("show");
+
+    } else {
+
+        topButton.classList.remove("show");
+
+    }
+
+});
+
+
+topButton.addEventListener("click", () => {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+});
+
+
+/* =====================================================
+   ANO DO FOOTER
+===================================================== */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+/* =====================================================
+   GALERIA
+===================================================== */
+
+document
+    .querySelectorAll(".gallery-item")
+    .forEach(item => {
+
+        item.addEventListener("click", () => {
+
+            const imagem =
+                item.querySelector("img");
+
+            if (!imagem) return;
+
+            if (!imagem.getAttribute("src")) return;
+
+            window.open(
+                imagem.src,
+                "_blank"
+            );
+
+        });
+
+    });
