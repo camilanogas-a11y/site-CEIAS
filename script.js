@@ -1,60 +1,56 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // 1. Splash Screen Loader Acelerado
+    const splashScreen = document.getElementById('splash-screen');
+    setTimeout(() => {
+        if (splashScreen) {
+            splashScreen.classList.add('hidden');
+        }
+    }, 900);
 
-    // 1. EFITO DE SOMBRA NO MENU AO ROLAR
+    // 2. Header Scroll Effect
     const header = document.getElementById('header');
-    
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 40) {
+        if (window.scrollY > 50) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
         }
     });
 
-    // 2. FILTRO DE EQUIPE E FUNCIONÁRIOS
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const cardsMembros = document.querySelectorAll('.card-membro');
+    // 3. Menu Mobile Toggle
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mainNav = document.getElementById('main-nav');
 
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-
-            const categoria = button.getAttribute('data-filter');
-
-            cardsMembros.forEach(card => {
-                if (categoria === 'todos' || card.classList.contains(categoria)) {
-                    card.style.display = 'block';
-                    setTimeout(() => {
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    }, 50);
-                } else {
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(20px)';
-                    setTimeout(() => {
-                        card.style.display = 'none';
-                    }, 250);
-                }
-            });
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('open');
+            mobileToggle.classList.toggle('active');
         });
-    });
+    }
 
-    // 3. ANIMAÇÃO DE MOVIMENTO AO ROLAR A PÁGINA (SCROLL REVEAL)
-    const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+    // 4. Accordion Interativo (Espaço da Família)
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const item = header.parentElement;
+            item.classList.toggle('active');
+            
+            const icon = header.querySelector('.icon');
+            if (icon) {
+                icon.textContent = item.classList.contains('active') ? '−' : '+';
             }
         });
-    }, {
-        threshold: 0.12
     });
 
-    elementsToAnimate.forEach(element => {
-        observer.observe(element);
-    });
+    // 5. Validação do Formulário de Contato
+    const contactForm = document.getElementById('school-contact-form');
+    const formFeedback = document.getElementById('form-feedback');
 
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formFeedback.innerHTML = '<p style="color: green; margin-top: 10px;">✦ Mensagem enviada com sucesso! A equipe pedagógica retornará em breve.</p>';
+            contactForm.reset();
+        });
+    }
 });
