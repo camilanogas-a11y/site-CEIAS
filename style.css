@@ -1,32 +1,26 @@
 /* ==========================================================================
-   DESIGN SYSTEM - C.E.I.A.S.
-   Cores baseadas no Logotipo Oficial[cite: 1]
+   DESIGN SYSTEM & LAYOUT BASE (C.E.I.A.S.)
+   Cores e estilos extraídos do logotipo oficial[cite: 1]
    ========================================================================== */
 
 :root {
-    /* Paleta Principal Extraída da Logo */
-    --color-primary: #0052A5;         /* Azul Institucional */
-    --color-primary-dark: #003670;    /* Azul Profundo */
-    --color-primary-light: #EBF3FA;   /* Azul Suave Aquarela */
-    
-    --color-accent-red: #E31E24;     /* Vermelho Vivo */
-    --color-accent-red-soft: #FDE8E8;/* Vermelho Suave */
-    
-    --color-accent-yellow: #FFD700;  /* Amarelo Estrela */
+    --color-primary: #0052A5;
+    --color-primary-dark: #003670;
+    --color-primary-light: #EBF3FA;
+    --color-accent-red: #E31E24;
+    --color-accent-red-soft: #FDE8E8;
+    --color-accent-yellow: #FFD700;
     --color-accent-yellow-soft: #FFF9E6;
-
-    /* Neutros e Superfícies */
+    
     --color-bg-main: #FAFAFC;
     --color-bg-alt: #F2F5F9;
     --color-surface: #FFFFFF;
     --color-text-main: #1E293B;
     --color-text-muted: #64748B;
     
-    /* Tipografia */
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Plus Jakarta Sans', sans-serif;
     
-    /* Layout & Sombras */
     --radius-sm: 8px;
     --radius-md: 16px;
     --radius-lg: 24px;
@@ -36,7 +30,6 @@
     --transition-normal: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Base Reset */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -54,7 +47,6 @@ body {
     color: var(--color-text-main);
     line-height: 1.6;
     overflow-x: hidden;
-    position: relative;
 }
 
 .container {
@@ -63,9 +55,7 @@ body {
     margin: 0 auto;
 }
 
-/* ==========================================================================
-   EFEITO AQUARELA DIGITAL NO FUNDO
-   ========================================================================== */
+/* Fundo Aquarela */
 .watercolor-bg-wrapper {
     position: fixed;
     top: 0;
@@ -85,33 +75,11 @@ body {
     animation: floatBlob 20s infinite alternate cubic-bezier(0.45, 0.05, 0.55, 0.95);
 }
 
-.blob-blue {
-    width: 500px;
-    height: 500px;
-    background: var(--color-primary-light);
-    top: -100px;
-    left: -100px;
-}
+.blob-blue { width: 500px; height: 500px; background: var(--color-primary-light); top: -100px; left: -100px; }
+.blob-red { width: 400px; height: 400px; background: var(--color-accent-red-soft); bottom: 10%; right: -50px; animation-delay: -5s; }
+.blob-yellow { width: 350px; height: 350px; background: var(--color-accent-yellow-soft); top: 40%; left: 30%; animation-delay: -10s; }
 
-.blob-red {
-    width: 400px;
-    height: 400px;
-    background: var(--color-accent-red-soft);
-    bottom: 10%;
-    right: -50px;
-    animation-delay: -5s;
-}
-
-.blob-yellow {
-    width: 350px;
-    height: 350px;
-    background: var(--color-accent-yellow-soft);
-    top: 40%;
-    left: 30%;
-    animation-delay: -10s;
-}
-
-/* Header */
+/* Header & Nav */
 .main-header {
     position: fixed;
     top: 0;
@@ -140,13 +108,9 @@ body {
     font-weight: 800;
     font-size: 1.5rem;
     color: var(--color-primary);
-    letter-spacing: 1px;
 }
 
-.logo-star-badge {
-    color: var(--color-accent-yellow);
-    margin-left: 4px;
-}
+.logo-star-badge { color: var(--color-accent-yellow); margin-left: 4px; }
 
 .nav-list {
     display: flex;
@@ -160,36 +124,63 @@ body {
     font-weight: 500;
     font-size: 0.95rem;
     transition: var(--transition-fast);
-    position: relative;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover, .nav-link.active { color: var(--color-primary); }
+
+/* Hero Section */
+.hero-section {
+    padding: 10rem 0 6rem 0;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.badge-tag {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: var(--color-primary-light);
     color: var(--color-primary);
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
 }
 
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background: var(--color-accent-red);
-    transition: var(--transition-fast);
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    line-height: 1.2;
+    color: var(--color-primary-dark);
 }
 
-.nav-link:hover::after, .nav-link.active::after {
-    width: 100%;
+.hero-motto {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-accent-red);
+    margin: 1rem 0;
 }
 
-/* Seções e Tipografia */
-.section-padding {
-    padding: 6rem 0;
+.hero-description {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
 }
 
-.bg-alt {
-    background-color: var(--color-bg-alt);
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
 }
+
+/* Grids e Seções Gerais */
+.section-padding { padding: 6rem 0; }
+.bg-alt { background-color: var(--color-bg-alt); }
+.text-center { text-align: center; }
 
 .section-subtitle {
     color: var(--color-accent-red);
@@ -205,152 +196,57 @@ body {
     font-family: var(--font-heading);
     font-size: 2.2rem;
     color: var(--color-primary-dark);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-.hero-motto {
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--color-accent-red);
-    margin: 1rem 0;
-}
-/* Botões Personalizados */
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.8rem 1.8rem;
-    border-radius: 50px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: var(--transition-normal);
-    cursor: pointer;
-    border: none;
-}
-
-.btn-primary {
-    background: var(--color-primary);
-    color: var(--color-surface);
-    box-shadow: 0 4px 15px rgba(0, 82, 165, 0.25);
-}
-
-.btn-primary:hover {
-    background: var(--color-primary-dark);
-    transform: translateY(-2px);
-}
-
-.btn-primary-highlight {
-    background: var(--color-accent-red);
-    color: var(--color-surface);
-}
-
-.btn-primary-highlight:hover {
-    background: #c51318;
-    box-shadow: 0 6px 20px rgba(227, 30, 36, 0.3);
-}
-
-.btn-outline {
-    background: transparent;
-    border: 2px solid var(--color-primary);
-    color: var(--color-primary);
-}
-
-.btn-outline:hover {
-    background: var(--color-primary-light);
-}
-
-/* Placeholders de Imagem Seguros */
-.image-placeholder {
-    background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
-    border-radius: var(--radius-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-text-muted);
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-align: center;
-    padding: 2rem;
-    min-height: 220px;
-    border: 2px dashed #94a3b8;
-}
-
-/* Seção Especial de Eventos (Primavera Fest & Semana Cultural) */
-.special-events-section {
-    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
-    color: var(--color-surface);
-    position: relative;
-    border-radius: var(--radius-lg);
-    margin: 2rem auto;
-}
-
-.gold-subtitle {
-    color: var(--color-accent-yellow) !important;
-}
-
-.events-dual-grid {
+.editorial-grid, .grid-2-col {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.event-featured-card {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: var(--radius-md);
-    padding: 2.5rem;
-    transition: var(--transition-normal);
-}
-
-.event-featured-card:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.12);
-}
-
-.event-badge {
-    display: inline-block;
-    padding: 0.3rem 0.8rem;
-    background: var(--color-accent-yellow);
-    color: var(--color-primary-dark);
-    font-weight: 700;
-    font-size: 0.8rem;
-    border-radius: 20px;
-    margin-bottom: 1rem;
-}
-
-/* Accordion Espaço da Família */
-.accordion-item {
-    background: var(--color-surface);
-    border-radius: var(--radius-sm);
-    margin-bottom: 1rem;
-    box-shadow: var(--shadow-soft);
-    overflow: hidden;
-}
-
-.accordion-header {
-    width: 100%;
-    padding: 1.2rem 1.5rem;
-    background: none;
-    border: none;
-    display: flex;
-    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
     align-items: center;
-    font-weight: 700;
-    font-size: 1.05rem;
-    color: var(--color-primary-dark);
-    cursor: pointer;
-    text-align: left;
 }
 
-.accordion-content {
-    padding: 0 1.5rem 1.2rem 1.5rem;
-    display: none;
-    color: var(--color-text-muted);
+.star-bullets {
+    list-style: none;
+    margin-top: 1rem;
 }
 
-.accordion-item.active .accordion-content {
-    display: block;
+.star-bullets li {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+@keyframes floatBlob {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(40px, 30px) scale(1.08); }
+    100% { transform: translate(-20px, 50px) scale(0.95); }
+}
+
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--color-surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.6s ease, visibility 0.6s;
+}
+
+.splash-screen.hidden { opacity: 0; visibility: hidden; }
+
+.splash-content { text-align: center; }
+.splash-logo { font-size: 3rem; font-weight: 800; color: var(--color-primary); }
+.splash-stars { color: var(--color-accent-yellow); font-size: 1.2rem; margin: 0.5rem 0; }
+.splash-motto { color: var(--color-accent-red); font-weight: 600; }
+
+.mobile-toggle { display: none; }
+
+@media (max-width: 768px) {
+    .hero-grid, .editorial-grid, .grid-2-col, .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    .nav-list { display: none; }
 }

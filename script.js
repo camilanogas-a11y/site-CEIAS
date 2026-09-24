@@ -75,3 +75,69 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+document.addEventListener('DOMContentLoaded', () => {
+    // Esconde a tela de Splash rapidamente
+    const splashScreen = document.getElementById('splash-screen');
+    setTimeout(() => {
+        if (splashScreen) {
+            splashScreen.classList.add('hidden');
+        }
+    }, 800);
+
+    // Efeito de sombra no Header ao rolar
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 40) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    // Accordion do Espaço da Família
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const item = header.parentElement;
+            item.classList.toggle('active');
+            
+            const icon = header.querySelector('.icon');
+            if (icon) {
+                icon.textContent = item.classList.contains('active') ? '−' : '+';
+            }
+        });
+    });
+
+    // Envio do formulário de contato
+    const contactForm = document.getElementById('school-contact-form');
+    const formFeedback = document.getElementById('form-feedback');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formFeedback.innerHTML = '<p style="color: green; font-weight: bold; margin-top: 10px;">✦ Mensagem recebida! Retornaremos o contato em breve.</p>';
+            contactForm.reset();
+        });
+    }
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            const filterValue = button.getAttribute('data-filter');
+
+            galleryItems.forEach(item => {
+                if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+});
