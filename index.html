@@ -39,12 +39,12 @@
 
   <main id="conteudo-principal">
     
-    <!-- Tela Inicial -->
+    <!-- Tela Inicial com Logo que Pulsa como Coração -->
     <section id="capa" class="hero">
       <div class="stars" id="stars" aria-hidden="true"></div>
       
       <div class="hero-in">
-        <div class="logo-wrap anim-hero-1">
+        <div class="logo-wrap anim-hero-1 logo-heartbeat">
           <div class="logo-glow"></div>
           <img src="logo.jpg" alt="Logotipo do Colégio" class="logo" onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex';">
           <div id="logo-fallback" class="logo-fallback" style="display:none;">
@@ -111,7 +111,7 @@
       </div>
     </section>
 
-    <!-- ÁREA DO ALUNO (INTEGRADA E REFORMULADA) -->
+    <!-- ÁREA DO ALUNO (SISTEMA DE CARDS CLEAN SEM EMOJIS) -->
     <section id="alunos" class="sec alunos reveal">
       <div class="container">
         <div class="head-center">
@@ -120,35 +120,43 @@
         </div>
 
         <div class="ac-grid">
-          <a href="https://classroom.google.com" target="_blank" rel="noopener noreferrer" class="card-forma card-aluno-item tilt-effect">
-            <span class="badge-tag">Ambiente Virtual</span>
-            <div class="aluno-card-header">
-              <span class="icon-aluno">💻</span>
-              <h3>Google Classroom</h3>
+          
+          <a href="https://classroom.google.com" target="_blank" rel="noopener noreferrer" class="card-forma card-aluno-clean tilt-effect">
+            <div class="card-aluno-head">
+              <span class="badge-tag">Ambiente Virtual</span>
+              <span class="indicator-arrow">↗</span>
             </div>
-            <p>Acesse suas turmas, envie trabalhos escolares e acompanhe os conteúdos das disciplinas.</p>
-            <span class="btn-ação-sm">Acessar Sala de Aula ›</span>
+            <h3>Google Classroom</h3>
+            <p>Acesse suas turmas, envie trabalhos escolares e acompanhe os conteúdos das disciplinas em tempo real.</p>
+            <div class="card-aluno-footer">
+              <span class="btn-ação-sm">Acessar Sala de Aula</span>
+            </div>
           </a>
 
-          <a href="https://www.areadoaluno.seed.pr.gov.br/" target="_blank" rel="noopener noreferrer" class="card-forma card-aluno-item tilt-effect">
-            <span class="badge-tag">Portal do Estudante</span>
-            <div class="aluno-card-header">
-              <span class="icon-aluno">📊</span>
-              <h3>Área do Aluno SEED</h3>
+          <a href="https://www.areadoaluno.seed.pr.gov.br/" target="_blank" rel="noopener noreferrer" class="card-forma card-aluno-clean tilt-effect">
+            <div class="card-aluno-head">
+              <span class="badge-tag">Portal do Estudante</span>
+              <span class="indicator-arrow">↗</span>
             </div>
-            <p>Consulte seu boletim escolar, relatório de frequência diária e situação de matrícula.</p>
-            <span class="btn-ação-sm">Consultar Boletim ›</span>
+            <h3>Área do Aluno SEED</h3>
+            <p>Consulte seu boletim escolar atualizado, histórico acadêmico e relatório de frequência diária.</p>
+            <div class="card-aluno-footer">
+              <span class="btn-ação-sm">Consultar Boletim</span>
+            </div>
           </a>
 
-          <a href="https://www.educacao.pr.gov.br/" target="_blank" rel="noopener noreferrer" class="card-forma card-aluno-item tilt-effect">
-            <span class="badge-tag">Informativo Geral</span>
-            <div class="aluno-card-header">
-              <span class="icon-aluno">🏫</span>
-              <h3>Escola Paraná</h3>
+          <a href="https://www.educacao.pr.gov.br/" target="_blank" rel="noopener noreferrer" class="card-forma card-aluno-clean tilt-effect">
+            <div class="card-aluno-head">
+              <span class="badge-tag">Informativo Geral</span>
+              <span class="indicator-arrow">↗</span>
             </div>
-            <p>Acompanhe avisos oficiais, programas da rede estadual e recursos educacionais.</p>
-            <span class="btn-ação-sm">Acessar Portal ›</span>
+            <h3>Escola Paraná</h3>
+            <p>Acompanhe avisos oficiais, calendários estaduais e diretrizes educacionais da rede escolar.</p>
+            <div class="card-aluno-footer">
+              <span class="btn-ação-sm">Acessar Portal</span>
+            </div>
           </a>
+
         </div>
       </div>
     </section>
@@ -173,7 +181,7 @@
             <div class="card-prof-compacto tilt-effect">
               <div class="foto-container">
                 <img src="foto-karina.jpg" alt="Diretora Karina" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                <div class="foto-placeholder" style="display:none;">👩‍💼</div>
+                <div class="foto-placeholder" style="display:none;">K</div>
               </div>
               <div class="prof-info">
                 <h4>Karina</h4>
@@ -189,7 +197,7 @@
             <div class="card-prof-compacto tilt-effect">
               <div class="foto-container">
                 <img src="foto-sheila.jpg" alt="Pedagoga Sheila" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                <div class="foto-placeholder" style="display:none;">👩‍🏫</div>
+                <div class="foto-placeholder" style="display:none;">S</div>
               </div>
               <div class="prof-info">
                 <h4>Sheila</h4>
@@ -200,7 +208,7 @@
             <div class="card-prof-compacto tilt-effect">
               <div class="foto-container">
                 <img src="foto-lucimara.jpg" alt="Pedagoga Lucimara" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                <div class="foto-placeholder" style="display:none;">👩‍🏫</div>
+                <div class="foto-placeholder" style="display:none;">L</div>
               </div>
               <div class="prof-info">
                 <h4>Lucimara</h4>
@@ -211,7 +219,7 @@
             <div class="card-prof-compacto tilt-effect">
               <div class="foto-container">
                 <img src="foto-adriana.jpg" alt="Pedagoga Adriana" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                <div class="foto-placeholder" style="display:none;">👩‍🏫</div>
+                <div class="foto-placeholder" style="display:none;">A</div>
               </div>
               <div class="prof-info">
                 <h4>Adriana</h4>
@@ -228,92 +236,92 @@
             <div class="carrossel-track" id="trackProfessores">
               
               <div class="card-prof-compacto tilt-effect">
-                <div class="foto-container"><img src="foto-maike.jpg" alt="Maike" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">👨‍🏫</div></div>
+                <div class="foto-container"><img src="foto-maike.jpg" alt="Maike" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">M</div></div>
                 <div class="prof-info"><h4>Maike</h4><p class="disciplina-texto">Filosofia</p></div>
               </div>
 
               <div class="card-prof-compacto tilt-effect">
-                <div class="foto-container"><img src="foto-susana.jpg" alt="Susana" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">👩‍🏫</div></div>
+                <div class="foto-container"><img src="foto-susana.jpg" alt="Susana" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">S</div></div>
                 <div class="prof-info"><h4>Susana</h4><p class="disciplina-texto">Língua Portuguesa e Língua Inglesa</p></div>
               </div>
 
               <div class="card-prof-compacto tilt-effect">
-                <div class="foto-container"><img src="foto-giovana.jpg" alt="Giovana" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">👩‍🏫</div></div>
+                <div class="foto-container"><img src="foto-giovana.jpg" alt="Giovana" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">G</div></div>
                 <div class="prof-info"><h4>Giovana</h4><p class="disciplina-texto">Língua Portuguesa e Língua Inglesa</p></div>
               </div>
 
               <div class="card-prof-compacto tilt-effect">
-                <div class="foto-container"><img src="foto-henrique.jpg" alt="Henrique" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">👨‍🏫</div></div>
+                <div class="foto-container"><img src="foto-henrique.jpg" alt="Henrique" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">H</div></div>
                 <div class="prof-info"><h4>Henrique</h4><p class="disciplina-texto">Matemática</p></div>
               </div>
 
               <div class="card-prof-compacto tilt-effect">
-                <div class="foto-container"><img src="foto-paula.jpg" alt="Paula" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">👩‍🏫</div></div>
+                <div class="foto-container"><img src="foto-paula.jpg" alt="Paula" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">P</div></div>
                 <div class="prof-info"><h4>Paula</h4><p class="disciplina-texto">Matemática e Educação Financeira</p></div>
               </div>
 
               <div class="card-prof-compacto tilt-effect">
-                <div class="foto-container"><img src="foto-cristian.jpg" alt="Cristian" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">👨‍🏫</div></div>
+                <div class="foto-container"><img src="foto-cristian.jpg" alt="Cristian" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">C</div></div>
                 <div class="prof-info"><h4>Cristian</h4><p class="disciplina-texto">Matemática, Física, Robótica e Ed. Financeira</p></div>
               </div>
 
               <div class="card-prof-compacto tilt-effect">
-                <div class="foto-container"><img src="foto-adilson.jpg" alt="Adilson" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">👨‍🏫</div></div>
+                <div class="foto-container"><img src="foto-adilson.jpg" alt="Adilson" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">A</div></div>
                 <div class="prof-info"><h4>Adilson</h4><p class="disciplina-texto">Matemática e Educação Financeira</p></div>
               </div>
 
               <div class="card-prof-compacto tilt-effect">
-                <div class="foto-container"><img src="foto-rafael.jpg" alt="Rafael" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">👨‍🏫</div></div>
+                <div class="foto-container"><img src="foto-rafael.jpg" alt="Rafael" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">R</div></div>
                 <div class="prof-info"><h4>Rafael</h4><p class="disciplina-texto">Sociologia</p></div>
               </div>
 
               <div class="card-prof-compacto tilt-effect">
-                <div class="foto-container"><img src="foto-sandra.jpg" alt="Sandra" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">👩‍🏫</div></div>
+                <div class="foto-container"><img src="foto-sandra.jpg" alt="Sandra" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">S</div></div>
                 <div class="prof-info"><h4>Sandra</h4><p class="disciplina-texto">Artes</p></div>
               </div>
 
               <div class="card-prof-compacto tilt-effect">
-                <div class="foto-container"><img src="foto-marcos.jpg" alt="Marcos" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">👨‍🏫</div></div>
+                <div class="foto-container"><img src="foto-marcos.jpg" alt="Marcos" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">M</div></div>
                 <div class="prof-info"><h4>Marcos</h4><p class="disciplina-texto">Química</p></div>
               </div>
 
               <div class="card-prof-compacto tilt-effect">
-                <div class="foto-container"><img src="foto-vandre.jpg" alt="Vandré" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">👨‍🏫</div></div>
+                <div class="foto-container"><img src="foto-vandre.jpg" alt="Vandré" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">V</div></div>
                 <div class="prof-info"><h4>Vandré</h4><p class="disciplina-texto">História</p></div>
               </div>
 
               <div class="card-prof-compacto tilt-effect">
-                <div class="foto-container"><img src="foto-malu.jpg" alt="Malu" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">👩‍🏫</div></div>
+                <div class="foto-container"><img src="foto-malu.jpg" alt="Malu" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">M</div></div>
                 <div class="prof-info"><h4>Malu</h4><p class="disciplina-texto">Ciências</p></div>
               </div>
 
               <div class="card-prof-compacto tilt-effect">
-                <div class="foto-container"><img src="foto-erli.jpg" alt="Erli" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">👩‍🏫</div></div>
+                <div class="foto-container"><img src="foto-erli.jpg" alt="Erli" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">E</div></div>
                 <div class="prof-info"><h4>Erli</h4><p class="disciplina-texto">Ciências e Biologia</p></div>
               </div>
 
               <div class="card-prof-compacto tilt-effect">
-                <div class="foto-container"><img src="foto-emerson.jpg" alt="Emerson" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">👨‍🏫</div></div>
+                <div class="foto-container"><img src="foto-emerson.jpg" alt="Emerson" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">E</div></div>
                 <div class="prof-info"><h4>Emerson</h4><p class="disciplina-texto">Educação Física</p></div>
               </div>
 
               <div class="card-prof-compacto tilt-effect">
-                <div class="foto-container"><img src="foto-roberto.jpg" alt="Roberto" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">👨‍🏫</div></div>
+                <div class="foto-container"><img src="foto-roberto.jpg" alt="Roberto" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">R</div></div>
                 <div class="prof-info"><h4>Roberto</h4><p class="disciplina-texto">Educação Física e Programação/IA</p></div>
               </div>
 
               <div class="card-prof-compacto tilt-effect">
-                <div class="foto-container"><img src="foto-rodrigo.jpg" alt="Rodrigo" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">👨‍🏫</div></div>
+                <div class="foto-container"><img src="foto-rodrigo.jpg" alt="Rodrigo" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">R</div></div>
                 <div class="prof-info"><h4>Rodrigo</h4><p class="disciplina-texto">Língua Portuguesa</p></div>
               </div>
 
               <div class="card-prof-compacto tilt-effect">
-                <div class="foto-container"><img src="foto-alceu.jpg" alt="Alceu" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">👨‍🏫</div></div>
+                <div class="foto-container"><img src="foto-alceu.jpg" alt="Alceu" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">A</div></div>
                 <div class="prof-info"><h4>Alceu</h4><p class="disciplina-texto">Língua Portuguesa</p></div>
               </div>
 
               <div class="card-prof-compacto tilt-effect">
-                <div class="foto-container"><img src="foto-sidney.jpg" alt="Sidney" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">👨‍🏫</div></div>
+                <div class="foto-container"><img src="foto-sidney.jpg" alt="Sidney" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="foto-placeholder" style="display:none;">S</div></div>
                 <div class="prof-info"><h4>Sidney</h4><p class="disciplina-texto">Geografia</p></div>
               </div>
 
@@ -333,7 +341,6 @@
           <div class="editorial-midia">
             <img src="foto-projetos.jpg" alt="Atividades escolares dos estudantes" class="editorial-foto" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="editorial-placeholder" style="display:none;">
-              <span class="icon-midia">🎓</span>
               <span>Fotografia das Atividades Escolares</span>
             </div>
           </div>
@@ -346,7 +353,6 @@
             </p>
             
             <div class="box-mensagem-acolhedora">
-              <span class="icon-mural">📌</span>
               <p>Este espaço será atualizado continuamente com as novas iniciativas e trabalhos dos nossos estudantes ao longo do ano letivo.</p>
             </div>
           </div>
@@ -424,7 +430,6 @@
             <div class="lista-contatos">
               
               <a href="https://wa.me/5541998320153" target="_blank" rel="noopener noreferrer" class="item-contato-link ripple">
-                <div class="icon-box">💬</div>
                 <div class="info-contato">
                   <small>WhatsApp Oficial</small>
                   <strong>(41) 99832-0153</strong>
@@ -433,7 +438,6 @@
               </a>
 
               <a href="mailto:sjpambrosiasabatovich@escola.pr.gov.br" class="item-contato-link ripple">
-                <div class="icon-box">✉️</div>
                 <div class="info-contato">
                   <small>E-mail Institucional</small>
                   <strong>sjpambrosiasabatovich@escola.pr.gov.br</strong>
@@ -465,7 +469,7 @@
             </div>
 
             <a href="https://maps.google.com/?q=Colônia+Marcelino+São+José+dos+Pinhais+PR" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block ripple">
-              🗺️ Abrir no Google Maps
+              Abrir no Google Maps
             </a>
           </div>
 
