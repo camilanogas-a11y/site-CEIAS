@@ -151,31 +151,33 @@ nav a:hover, nav a.ativo { color: var(--blue); }
 
 .hero-in { position: relative; z-index: 2; max-width: 820px; }
 
-/* LOGO QUE PULSA IGUAL CORAÇÃO (HEARTBEAT) */
+/* LOGO PULSANDO COMO UM CORAÇÃO (CORRIGIDO) */
 .logo-wrap {
-  position: relative; width: min(65vw, 240px); margin: 0 auto 1.5rem;
-}
-.logo-heartbeat {
-  animation: heartbeat 1.8s ease-in-out infinite;
+  position: relative;
+  width: min(65vw, 240px);
+  margin: 0 auto 1.5rem;
+  animation: logoHeartbeat 1.6s ease-in-out infinite;
+  transform-origin: center center;
 }
 
-@keyframes heartbeat {
+@keyframes logoHeartbeat {
   0% { transform: scale(1); }
-  14% { transform: scale(1.08); }
+  14% { transform: scale(1.12); }
   28% { transform: scale(1); }
-  42% { transform: scale(1.08); }
+  42% { transform: scale(1.12); }
   70% { transform: scale(1); }
+  100% { transform: scale(1); }
 }
 
 .logo-glow {
-  position: absolute; inset: -10px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(217, 163, 26, 0.45) 0%, rgba(255,255,255,0) 70%);
-  animation: glowPulse 1.8s ease-in-out infinite;
+  position: absolute; inset: -15px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(217, 163, 26, 0.5) 0%, rgba(255,255,255,0) 70%);
+  animation: glowHeartbeat 1.6s ease-in-out infinite;
 }
 
-@keyframes glowPulse {
-  0%, 100% { opacity: 0.5; transform: scale(0.95); }
-  14%, 42% { opacity: 0.9; transform: scale(1.1); }
+@keyframes glowHeartbeat {
+  0%, 70%, 100% { opacity: 0.4; transform: scale(0.95); }
+  14%, 42% { opacity: 1; transform: scale(1.15); }
 }
 
 .logo {
@@ -183,15 +185,10 @@ nav a:hover, nav a.ativo { color: var(--blue); }
   mix-blend-mode: multiply; filter: drop-shadow(0 10px 20px rgba(13, 43, 92, 0.15));
 }
 
-.anim-hero-1 { animation: fadeInDown 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
 .anim-hero-2 { animation: fadeInUp 0.8s 0.2s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
 .anim-hero-3 { animation: fadeInUp 0.8s 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
 .anim-hero-4 { animation: fadeInUp 0.8s 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
 
-@keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-25px); }
-  to { opacity: 1; transform: none; }
-}
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(25px); }
   to { opacity: 1; transform: none; }
@@ -240,30 +237,15 @@ nav a:hover, nav a.ativo { color: var(--blue); }
 .float-anim-delay { animation: floatSlow 6s 3s ease-in-out infinite; }
 @keyframes floatSlow { 50% { transform: translateY(-8px); } }
 
-/* ÁREA DO ALUNO CLEAN (SEM EMOJIS) */
+/* ÁREA DO ALUNO CLEAN */
 .alunos { background: var(--sage); }
-.card-aluno-clean {
-  text-decoration: none; color: inherit; position: relative;
-}
-.card-aluno-head {
-  display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem;
-}
-.indicator-arrow {
-  font-size: 1.1rem; font-weight: 700; color: var(--blue);
-  transition: transform 0.25s ease;
-}
-.card-aluno-clean:hover .indicator-arrow {
-  transform: translate(3px, -3px);
-}
-.card-aluno-clean h3 {
-  font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--blue-dark);
-}
-.card-aluno-clean p {
-  font-size: 0.88rem; color: var(--mut); margin-bottom: 1.5rem; line-height: 1.55;
-}
-.card-aluno-footer {
-  margin-top: auto;
-}
+.card-aluno-clean { text-decoration: none; color: inherit; position: relative; }
+.card-aluno-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem; }
+.indicator-arrow { font-size: 1.1rem; font-weight: 700; color: var(--blue); transition: transform 0.25s ease; }
+.card-aluno-clean:hover .indicator-arrow { transform: translate(3px, -3px); }
+.card-aluno-clean h3 { font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--blue-dark); }
+.card-aluno-clean p { font-size: 0.88rem; color: var(--mut); margin-bottom: 1.5rem; line-height: 1.55; }
+.card-aluno-footer { margin-top: auto; }
 
 /* Nossa Equipe com Abas */
 .equipe { background: var(--white); }
