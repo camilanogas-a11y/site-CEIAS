@@ -6,10 +6,10 @@
   <title>Colégio Estadual do Campo Irmã Ambrósia Sabatovich</title>
   <meta name="description" content="Site oficial do Colégio Estadual do Campo Irmã Ambrósia Sabatovich - Educando para a comunidade.">
   
-  <!-- Fontes Oficiais: Lora (Títulos) e Inter (Texto e Interface) -->
+  <!-- Fontes Institucionais: Playfair Display (Títulos) e Nunito (Texto e Interface) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="style.css">
 </head>
@@ -36,7 +36,7 @@
 
   <main id="conteudo-principal">
     
-    <!-- Capa / Hero -->
+    <!-- Capa / Hero com Animação de Estrelas -->
     <section id="capa" class="hero reveal">
       <div class="stars" id="stars" aria-hidden="true"></div>
       <div class="blob b1" aria-hidden="true"></div>
@@ -44,7 +44,6 @@
       <div class="hero-in">
         <div class="logo-wrap">
           <div class="halo" aria-hidden="true"></div>
-          <!-- Espaço reservado para a logo oficial com tratamento para fundo -->
           <img src="logo.jpg" alt="Logotipo do Colégio Estadual do Campo Irmã Ambrósia Sabatovich" class="logo" onerror="this.style.display='none'">
         </div>
         <p class="kicker">Colônia Marcelino · São José dos Pinhais · PR</p>
@@ -59,39 +58,57 @@
 
     <!-- Acesso Rápido / Valores e Lema -->
     <section id="acesso" class="sec acesso reveal">
+      <div class="bg-organic-shape" aria-hidden="true"></div>
       <div class="head">
         <p class="kicker">Identidade e Princípios</p>
         <h2>Nossos Valores & Lema</h2>
       </div>
       <div class="ac-grid">
-        <div class="ac-card">
+        
+        <!-- Bloco do Lema -->
+        <div class="ac-bloco lema-box">
+          <div class="icone-destaque">🌾</div>
           <h3>Nosso Lema</h3>
-          <p class="lema-destaque">"Educando para a comunidade"</p>
+          <p class="lema-texto">"Educando para a comunidade"</p>
           <p class="ac-desc">
             Buscamos unir o aprendizado escolar às raízes e necessidades da Colônia Marcelino, fortalecendo os laços comunitários e o protagonismo dos estudantes.
           </p>
         </div>
-        <div class="ac-card">
+
+        <!-- Bloco dos Valores -->
+        <div class="ac-bloco valores-box">
           <h3>Valores Norteadores</h3>
           <ul class="lista-valores">
             <li>
-              <strong>Comunidade e Pertencimento</strong>
-              <span>Valorização da cultura local e do ambiente do campo.</span>
+              <span class="v-icon">🤝</span>
+              <div>
+                <strong>Comunidade e Pertencimento</strong>
+                <small>Valorização da cultura local e do ambiente do campo.</small>
+              </div>
             </li>
             <li>
-              <strong>Compromisso e Qualidade</strong>
-              <span>Dedicação constante ao ensino público gratuito e transformador.</span>
+              <span class="v-icon">🌱</span>
+              <div>
+                <strong>Compromisso e Qualidade</strong>
+                <small>Dedicação constante ao ensino público gratuito e transformador.</small>
+              </div>
             </li>
             <li>
-              <strong>Respeito e Cidadania</strong>
-              <span>Formação ética, inclusiva e colaborativa para a vida em sociedade.</span>
+              <span class="v-icon">🎓</span>
+              <div>
+                <strong>Respeito e Cidadania</strong>
+                <small>Formação ética, inclusiva e colaborativa para a vida em sociedade.</small>
+              </div>
             </li>
           </ul>
         </div>
-        <div class="ac-card">
+
+        <!-- Bloco de Próximos Eventos -->
+        <div class="ac-bloco eventos-box">
           <h3>Próximos Eventos</h3>
           <ul id="prox" aria-live="polite"></ul>
         </div>
+
       </div>
     </section>
 
@@ -109,18 +126,17 @@
       </div>
     </section>
 
-    <!-- Nossa Equipe (Direção, Pedagogia e Professores) -->
+    <!-- Nossa Equipe -->
     <section id="equipe" class="sec equipe reveal">
       <p class="kicker">Corpo Docente e Administrativo</p>
       <h2>Nossa Equipe</h2>
 
-      <!-- Bloco Direção e Pedagogia -->
+      <!-- Direção e Pedagogia -->
       <div class="subsecao-titulo">Direção e Pedagogia</div>
       <div class="equipe-grid equipe-gestao">
         
         <div class="card-pessoal">
           <div class="foto-box">
-            <!-- Substitua o atributo src pela foto real: src="fotos/karina.jpg" -->
             <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='%231f4e9c'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>" alt="Foto de Karina" class="foto-prof">
           </div>
           <div class="info-prof">
@@ -161,7 +177,7 @@
 
       </div>
 
-      <!-- Bloco Professores -->
+      <!-- Corpo Docente -->
       <div class="subsecao-titulo">Corpo Docente</div>
       <div class="equipe-grid equipe-professores">
         
@@ -348,38 +364,39 @@
       </div>
     </section>
 
-    <!-- Projetos e Protagonismo Estudantil (Destaque Editorial Único) -->
+    <!-- Projetos e Protagonismo Estudantil (Destaque Horizontal Ampliado) -->
     <section id="projetos" class="sec projetos reveal">
-      <p class="kicker">Aprendizado na Prática</p>
-      <h2>Projetos e Protagonismo Estudantil</h2>
-      
-      <div class="editorial-container">
-        <div class="editorial-midia">
-          <!-- Espaço para foto real das atividades escolares dos alunos -->
+      <div class="head">
+        <p class="kicker">Aprendizado na Prática</p>
+        <h2>Projetos e Protagonismo Estudantil</h2>
+      </div>
+
+      <div class="editorial-panel">
+        <div class="editorial-midia-horizontal">
           <div class="editorial-foto-placeholder">
-            <span>📸 Imagem das Atividades Escolares</span>
-            <small>Espaço reservado para foto real dos alunos em aula ou projeto</small>
+            <span class="foto-icon">📷</span>
+            <span class="foto-label">Fotografia das Atividades dos Estudantes</span>
+            <small>Espaço reservado para imagem real (proporção 16:9 ou 3:2)</small>
           </div>
         </div>
-        <div class="editorial-conteudo">
-          <h3>Incentivo ao Conhecimento e à Comunidade</h3>
+
+        <div class="editorial-texto-org">
+          <h3>Incentivo à Criatividade e à Comunidade</h3>
           <p>
-            No Colégio Estadual do Campo Irmã Ambrósia Sabatovich, o aprendizado vai além da sala de aula. Estimulamos a curiosidade científica, o trabalho colaborativo e o protagonismo dos estudantes por meio de atividades práticas integradas à realidade local.
+            No Colégio Estadual do Campo Irmã Ambrósia Sabatovich, o conhecimento é construído de forma ativa e com significado. Estimulamos o protagonismo juvenil, o espírito científico e a colaboração no cotidiano escolar.
           </p>
-          <p>
-            Desenvolvemos iniciativas contínuas que conectam tradição, inovação tecnológica e sustentabilidade:
-          </p>
-          <ul class="eixos-projetos">
-            <li>
-              <strong>Cultura e Identidade Local:</strong> Valorização das raízes históricas e culturais da Colônia Marcelino.
-            </li>
-            <li>
-              <strong>Robótica e Programação:</strong> Introdução às novas tecnologias, lógica e inteligência artificial no ambiente escolar.
-            </li>
-            <li>
-              <strong>Meio Ambiente e Sustentabilidade:</strong> Conscientização ecológica e integração com a vida no campo.
-            </li>
-          </ul>
+
+          <div class="eixos-pills">
+            <span class="pill-eixo">
+              <strong>🎨 Cultura Local:</strong> Valorização das tradições da Colônia Marcelino.
+            </span>
+            <span class="pill-eixo">
+              <strong>🤖 Inovação:</strong> Lógica de programação, robótica e tecnologias.
+            </span>
+            <span class="pill-eixo">
+              <strong>🌱 Sustentabilidade:</strong> Consciência ecológica e respeito ao campo.
+            </span>
+          </div>
         </div>
       </div>
     </section>
@@ -432,19 +449,19 @@
       </div>
     </section>
 
-    <!-- Secretaria Escolar e Contato com Mapa Incorporado Real -->
+    <!-- Secretaria Escolar e Contato -->
     <section id="contato" class="sec contato reveal">
       <p class="kicker">Atendimento e Localização</p>
       <h2>Secretaria Escolar e Contato</h2>
 
       <div class="grid-contato-institucional">
         
-        <!-- A) Fale com a Secretaria -->
+        <!-- Fale com a Secretaria -->
         <div class="card-institucional">
           <span class="badge-atendimento">Atendimento Oficial</span>
           <h3>Secretaria Escolar</h3>
           <p class="desc-atendimento">
-            Entre em contato com nossa equipe para informações sobre matrículas, emissão de declarações, histórico escolar e atendimento à comunidade.
+            Entre em contato para orientações sobre matrículas, histórico escolar, declarações e informações gerais.
           </p>
 
           <div class="lista-contatos">
@@ -468,7 +485,7 @@
           </div>
         </div>
 
-        <!-- B) Onde Estamos com Google Maps Incorporado -->
+        <!-- Onde Estamos com Mapa Incorporado Real -->
         <div class="card-institucional">
           <span class="badge-atendimento badge-gold">Localização</span>
           <h3>Onde Estamos</h3>
@@ -477,13 +494,12 @@
             Colônia Marcelino · Área Rural · São José dos Pinhais - PR
           </p>
 
-          <!-- Incorporação Real e Segura do Google Maps (Sem chave de API exposta) -->
           <div class="mapa-container">
             <iframe 
               title="Localização do Colégio na Colônia Marcelino"
               src="https://maps.google.com/maps?q=Col%C3%B4nia%20Marcelino%20S%C3%A3o%20Jos%C3%A9%20dos%20Pinhais&t=&z=14&ie=UTF8&iwloc=&output=embed" 
               width="100%" 
-              height="220" 
+              height="210" 
               style="border:0;" 
               allowfullscreen="" 
               loading="lazy" 

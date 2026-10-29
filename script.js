@@ -1,15 +1,15 @@
-// Estrelas Flutuantes Sutis na Capa
+// Recuperação das Estrelas Flutuantes Suaves na Capa
 const sc = document.getElementById('stars'), cores = ['#f4c92e', '#f7dc5c', '#d9352e', '#9cc6e8', '#f4c92e'];
 if (sc) {
-  for (let i = 0; i < 18; i++) {
-    const s = document.createElement('span'), z = 6 + Math.random() * 14;
+  for (let i = 0; i < 16; i++) {
+    const s = document.createElement('span'), z = 5 + Math.random() * 12;
     s.className = 'star';
-    s.style.cssText = `left:${Math.random() * 100}%;width:${z}px;height:${z}px;--c:${cores[i % 5]};--o:${.3 + Math.random() * .4};--t:${12 + Math.random() * 16}s;--dl:-${Math.random() * 20}s;--x:${(Math.random() - .5) * 80}px`;
+    s.style.cssText = `left:${Math.random() * 100}%;width:${z}px;height:${z}px;--c:${cores[i % 5]};--o:${.25 + Math.random() * .35};--t:${10 + Math.random() * 14}s;--dl:-${Math.random() * 18}s;--x:${(Math.random() - .5) * 60}px`;
     sc.appendChild(s);
   }
 }
 
-// Menu Mobile
+// Menu Mobile Responsivo
 const bg = document.getElementById('burger'), mn = document.getElementById('menu');
 if (bg && mn) {
   bg.onclick = () => {
@@ -28,7 +28,7 @@ const io = new IntersectionObserver(es => es.forEach(e => {
 }), { threshold: .1 });
 document.querySelectorAll('.reveal').forEach(e => io.observe(e));
 
-// Atualização Dinâmica do Ano
+// Atualização Dinâmica dos Anos
 const elAno = document.getElementById('ano');
 if (elAno) elAno.textContent = new Date().getFullYear();
 const elFooter = document.getElementById('anoFooter');
