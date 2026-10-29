@@ -1,10 +1,10 @@
-// Estrelas flutuantes
+// Estrelas flutuantes suaves
 const sc = document.getElementById('stars'), cores = ['#d9a31a', '#f7dc5c', '#d9352e', '#9cc6e8', '#d9a31a'];
 if (sc) {
-  for (let i = 0; i < 16; i++) {
-    const s = document.createElement('span'), z = 5 + Math.random() * 12;
+  for (let i = 0; i < 18; i++) {
+    const s = document.createElement('span'), z = 5 + Math.random() * 10;
     s.className = 'star';
-    s.style.cssText = `left:${Math.random() * 100}%;width:${z}px;height:${z}px;--c:${cores[i % 5]};--o:${.35 + Math.random() * .35};--t:${12 + Math.random() * 14}s;--dl:-${Math.random() * 20}s;--x:${(Math.random() - .5) * 50}px`;
+    s.style.cssText = `left:${Math.random() * 100}%;width:${z}px;height:${z}px;--c:${cores[i % 5]};--o:${.4 + Math.random() * .4};--t:${10 + Math.random() * 12}s;--dl:-${Math.random() * 20}s;--x:${(Math.random() - .5) * 40}px`;
     sc.appendChild(s);
   }
 }
@@ -19,30 +19,33 @@ if (bg && mn) {
   mn.querySelectorAll('a').forEach(a => a.onclick = () => mn.classList.remove('open'));
 }
 
-// Sistema de Abas da Equipe
+// Lógica Funcional das Abas da Equipe
 const tabBtns = document.querySelectorAll('.equipe-tabs .tab-btn');
 const tabContents = document.querySelectorAll('.tab-content');
 
 tabBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    tabBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
-    tabContents.forEach(c => c.hidden = true);
+    const tabTarget = btn.getAttribute('data-tab');
+
+    tabBtns.forEach(b => b.classList.remove('active'));
+    tabContents.forEach(c => c.classList.remove('active'));
 
     btn.classList.add('active');
-    btn.setAttribute('aria-selected', 'true');
-    const target = document.getElementById(btn.dataset.target);
-    if (target) target.hidden = false;
+    const activeContent = document.getElementById(tabTarget);
+    if (activeContent) {
+      activeContent.classList.add('active');
+    }
   });
 });
 
-// Controls do Carrossel de Professores
+// Controles do Carrossel de Professores
 const track = document.getElementById('trackProfessores');
 const arrowPrev = document.getElementById('arrowPrev');
 const arrowNext = document.getElementById('arrowNext');
 
 if (track && arrowPrev && arrowNext) {
-  arrowPrev.addEventListener('click', () => { track.scrollBy({ left: -240, behavior: 'smooth' }); });
-  arrowNext.addEventListener('click', () => { track.scrollBy({ left: 240, behavior: 'smooth' }); });
+  arrowPrev.addEventListener('click', () => { track.scrollBy({ left: -220, behavior: 'smooth' }); });
+  arrowNext.addEventListener('click', () => { track.scrollBy({ left: 220, behavior: 'smooth' }); });
 }
 
 // Animação de Revelação
