@@ -128,24 +128,27 @@ nav a:hover, nav a.ativo { color: var(--blue); }
 .burger { display: none; background: none; border: 0; padding: 0.5rem; cursor: pointer; }
 .burger span { display: block; width: 22px; height: 2px; background: var(--ink); margin: 5px 0; }
 
-/* Capa / Tela Inicial Vigorosa */
+/* Capa / Tela Inicial */
 .hero {
   position: relative; min-height: 90vh; display: grid; place-items: center; text-align: center;
   padding: 7rem 1.5rem 4rem;
-  background: linear-gradient(180deg, #c3dafb 0%, #e1edfc 55%, var(--bg-page) 100%);
+  background: linear-gradient(180deg, #b0d1fc 0%, #d8e7fc 55%, var(--bg-page) 100%);
   overflow: hidden;
 }
 
+/* ESTRELAS MAIS VISÍVEIS E ILUMINADAS */
 .stars { position: absolute; inset: 0; pointer-events: none; z-index: 1; }
 .star {
-  position: absolute; bottom: -20px; background: var(--c);
+  position: absolute; bottom: -30px; background: var(--c);
   clip-path: polygon(50% 0, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  filter: drop-shadow(0 0 6px var(--c));
   opacity: 0; animation: rise var(--t) linear var(--dl) infinite;
 }
 @keyframes rise {
-  10% { opacity: var(--o); }
-  50% { transform: translate(var(--x), -45vh) rotate(180deg); }
-  100% { opacity: 0; transform: translate(calc(var(--x) * -1), -90vh) rotate(360deg); }
+  0% { opacity: 0; transform: translate(0, 0) scale(0.6); }
+  20% { opacity: var(--o); }
+  80% { opacity: var(--o); }
+  100% { opacity: 0; transform: translate(var(--x), -85vh) rotate(360deg) scale(1.1); }
 }
 
 .hero-in { position: relative; z-index: 2; max-width: 820px; }
@@ -158,12 +161,12 @@ nav a:hover, nav a.ativo { color: var(--blue); }
 }
 .logo-glow {
   position: absolute; inset: -10px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(217, 163, 26, 0.35) 0%, rgba(255,255,255,0) 70%);
+  background: radial-gradient(circle, rgba(217, 163, 26, 0.45) 0%, rgba(255,255,255,0) 70%);
   animation: glowPulse 4s ease-in-out infinite alternate;
 }
 @keyframes glowPulse {
-  0% { transform: scale(0.95); opacity: 0.5; }
-  100% { transform: scale(1.1); opacity: 0.9; }
+  0% { transform: scale(0.95); opacity: 0.6; }
+  100% { transform: scale(1.15); opacity: 1; }
 }
 
 .logo {
@@ -228,7 +231,7 @@ nav a:hover, nav a.ativo { color: var(--blue); }
 .float-anim-delay { animation: floatSlow 6s 3s ease-in-out infinite; }
 @keyframes floatSlow { 50% { transform: translateY(-8px); } }
 
-/* Nossa Equipe com Abas (VISIBILIDADE CORRIGIDA) */
+/* Nossa Equipe com Abas */
 .equipe { background: var(--sage); }
 .equipe-tabs { display: flex; justify-content: center; gap: 0.8rem; margin-bottom: 2.2rem; }
 .tab-btn {
@@ -241,7 +244,6 @@ nav a:hover, nav a.ativo { color: var(--blue); }
   box-shadow: 0 6px 16px rgba(27, 75, 155, 0.3); transform: translateY(-2px);
 }
 
-/* Oculta abas inativas e mostra apenas a ativa */
 .tab-content { display: none; }
 .tab-content.active { display: block; animation: fadeIn 0.4s ease forwards; }
 

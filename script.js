@@ -1,10 +1,10 @@
-// Estrelas flutuantes na capa
-const sc = document.getElementById('stars'), cores = ['#d9a31a', '#f7dc5c', '#d9352e', '#9cc6e8', '#d9a31a'];
+// Estrelas Flutuantes Mais Visíveis e Brilhantes
+const sc = document.getElementById('stars'), cores = ['#d9a31a', '#fadb5f', '#f2ab09', '#ffffff', '#e8b835'];
 if (sc) {
-  for (let i = 0; i < 18; i++) {
-    const s = document.createElement('span'), z = 5 + Math.random() * 10;
+  for (let i = 0; i < 22; i++) {
+    const s = document.createElement('span'), z = 10 + Math.random() * 12; // Tamanho maior
     s.className = 'star';
-    s.style.cssText = `left:${Math.random() * 100}%;width:${z}px;height:${z}px;--c:${cores[i % 5]};--o:${.4 + Math.random() * .4};--t:${10 + Math.random() * 12}s;--dl:-${Math.random() * 20}s;--x:${(Math.random() - .5) * 40}px`;
+    s.style.cssText = `left:${Math.random() * 100}%;width:${z}px;height:${z}px;--c:${cores[i % 5]};--o:${.6 + Math.random() * .4};--t:${8 + Math.random() * 10}s;--dl:-${Math.random() * 15}s;--x:${(Math.random() - .5) * 60}px`;
     sc.appendChild(s);
   }
 }
@@ -19,7 +19,7 @@ if (bg && mn) {
   mn.querySelectorAll('a').forEach(a => a.onclick = () => mn.classList.remove('open'));
 }
 
-// LÓGICA CORRIGIDA DAS ABAS DA EQUIPE
+// Lógica das Abas da Equipe
 const tabBtns = document.querySelectorAll('.equipe-tabs .tab-btn');
 const tabContents = document.querySelectorAll('.tab-content');
 
@@ -27,11 +27,9 @@ tabBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     const tabTarget = btn.getAttribute('data-tab');
 
-    // Remove estado ativo dos botões e esconde todos os conteúdos
     tabBtns.forEach(b => b.classList.remove('active'));
     tabContents.forEach(c => c.classList.remove('active'));
 
-    // Ativa o botão e o conteúdo selecionado
     btn.classList.add('active');
     const targetContent = document.getElementById(tabTarget);
     if (targetContent) {
