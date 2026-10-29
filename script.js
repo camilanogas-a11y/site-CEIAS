@@ -1,4 +1,4 @@
-// Controle das Abas da Equipe com Animação
+// Controle das Abas da Equipe
 const tabBtns = document.querySelectorAll('.tab-btn');
 const tabContents = document.querySelectorAll('.tab-content');
 
@@ -16,29 +16,39 @@ tabBtns.forEach(btn => {
     const activeContent = document.getElementById(target);
     if (activeContent) {
       activeContent.hidden = false;
-      // Pequeno timeout para disparar a animação CSS de Fade In
-      setTimeout(() => {
-        activeContent.classList.add('active');
-      }, 20);
+      setTimeout(() => activeContent.classList.add('active'), 20);
     }
   });
 });
 
-// Carrossel de Professores
+// Carrossel
 const track = document.getElementById('trackProfessores');
 const arrowPrev = document.getElementById('arrowPrev');
 const arrowNext = document.getElementById('arrowNext');
-
 if (track && arrowPrev && arrowNext) {
-  arrowPrev.addEventListener('click', () => {
-    track.scrollBy({ left: -240, behavior: 'smooth' });
-  });
-  arrowNext.addEventListener('click', () => {
-    track.scrollBy({ left: 240, behavior: 'smooth' });
-  });
+  arrowPrev.addEventListener('click', () => track.scrollBy({ left: -240, behavior: 'smooth' }));
+  arrowNext.addEventListener('click', () => track.scrollBy({ left: 240, behavior: 'smooth' }));
 }
 
-// Animação ao rolar a página (Scroll Reveal)
+// FAQ Accordion
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    item.classList.toggle('active');
+    btn.querySelector('span').textContent = item.classList.contains('active') ? '−' : '+';
+  });
+});
+
+// Acessibilidade: Tamanho da Fonte
+let fontPercent = 100;
+document.getElementById('btnFontIncrease').onclick = () => { if (fontPercent < 130) fontPercent += 10; document.documentElement.style.fontSize = fontPercent + '%'; };
+document.getElementById('btnFontDecrease').onclick = () => { if (fontPercent > 80) fontPercent -= 10; document.documentElement.style.fontSize = fontPercent + '%'; };
+document.getElementById('btnFontReset').onclick = () => { fontPercent = 100; document.documentElement.style.fontSize = '100%'; };
+
+// Acessibilidade: Alto Contraste
+document.getElementById('btnContrast').onclick = () => document.body.classList.toggle('contrast');
+
+// Scroll Reveal
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -48,7 +58,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.15 });
 
-document.querySelectorAll('.sec, .reveal').forEach(el => {
+document.querySelectorAll('.sec').forEach(el => {
   el.classList.add('reveal');
   observer.observe(el);
 });
