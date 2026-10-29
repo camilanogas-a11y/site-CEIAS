@@ -2,9 +2,9 @@
 const sc = document.getElementById('stars'), cores = ['#d9a31a', '#f7dc5c', '#d9352e', '#9cc6e8', '#d9a31a'];
 if (sc) {
   for (let i = 0; i < 16; i++) {
-    const s = document.createElement('span'), z = 6 + Math.random() * 14;
+    const s = document.createElement('span'), z = 5 + Math.random() * 12;
     s.className = 'star';
-    s.style.cssText = `left:${Math.random() * 100}%;width:${z}px;height:${z}px;--c:${cores[i % 5]};--o:${.3 + Math.random() * .4};--t:${12 + Math.random() * 14}s;--dl:-${Math.random() * 20}s;--x:${(Math.random() - .5) * 60}px`;
+    s.style.cssText = `left:${Math.random() * 100}%;width:${z}px;height:${z}px;--c:${cores[i % 5]};--o:${.35 + Math.random() * .35};--t:${12 + Math.random() * 14}s;--dl:-${Math.random() * 20}s;--x:${(Math.random() - .5) * 50}px`;
     sc.appendChild(s);
   }
 }
@@ -19,34 +19,33 @@ if (bg && mn) {
   mn.querySelectorAll('a').forEach(a => a.onclick = () => mn.classList.remove('open'));
 }
 
-// Modal do Formulário de E-mail
-const btnAbrirModal = document.getElementById('btnAbrirFormEmail');
-const modalEmail = document.getElementById('modalEmail');
-const btnFecharModal = document.getElementById('fecharModal');
-const formMensagem = document.getElementById('formMensagemDireta');
-const statusEnvio = document.getElementById('statusEnvio');
+// Sistema de Abas da Equipe
+const tabBtns = document.querySelectorAll('.equipe-tabs .tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
 
-if (btnAbrirModal && modalEmail) {
-  btnAbrirModal.addEventListener('click', () => { modalEmail.hidden = false; });
-}
-if (btnFecharModal && modalEmail) {
-  btnFecharModal.addEventListener('click', () => { modalEmail.hidden = true; });
-}
-if (formMensagem) {
-  formMensagem.addEventListener('submit', (e) => {
-    e.preventDefault();
-    statusEnvio.hidden = false;
-    statusEnvio.className = 'sucesso';
-    statusEnvio.textContent = 'Mensagem enviada com sucesso à secretaria!';
-    setTimeout(() => {
-      formMensagem.reset();
-      statusEnvio.hidden = true;
-      modalEmail.hidden = true;
-    }, 2200);
+tabBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    tabBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
+    tabContents.forEach(c => c.hidden = true);
+
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected', 'true');
+    const target = document.getElementById(btn.dataset.target);
+    if (target) target.hidden = false;
   });
+});
+
+// Controls do Carrossel de Professores
+const track = document.getElementById('trackProfessores');
+const arrowPrev = document.getElementById('arrowPrev');
+const arrowNext = document.getElementById('arrowNext');
+
+if (track && arrowPrev && arrowNext) {
+  arrowPrev.addEventListener('click', () => { track.scrollBy({ left: -240, behavior: 'smooth' }); });
+  arrowNext.addEventListener('click', () => { track.scrollBy({ left: 240, behavior: 'smooth' }); });
 }
 
-// Animação de revelação suave
+// Animação de Revelação
 const io = new IntersectionObserver(es => es.forEach(e => {
   if (e.isIntersecting) {
     e.target.classList.add('in');
@@ -127,7 +126,7 @@ $('va').onclick = () => { modo = 'ano'; render(); };
 $('prev').onclick = () => { if (modo === 'ano') ano--; else if (--mes < 0) { mes = 11; ano--; } render(); };
 $('next').onclick = () => { if (modo === 'ano') ano++; else if (++mes > 11) { mes = 0; ano++; } render(); };
 
-// Barra de Trimestres
+// Trimestres
 (() => {
   const T = [['1º trim.', '2026-02-05', '2026-05-14', '63 dias'], ['2º trim.', '2026-05-18', '2026-09-04', '68 dias'], ['3º trim.', '2026-09-08', '2026-12-18', '70 dias']],
     D = s => new Date(s + 'T12:00'), a0 = D(T[0][1]), a1 = D(T[2][2]), tot = a1 - a0, ag = new Date();
@@ -145,7 +144,7 @@ render();
   document.getElementById('prox').innerHTML = l.length ? l.map(e => `<li><b>${pt(e.d).slice(0, 5)}</b><span>${e.n}</span></li>`).join('') : '<li>Sem próximas datas.</li>';
 })();
 
-// Voltar ao topo e Navegação Ativa
+// Voltar ao topo
 const tp = document.getElementById('topo');
 if (tp) {
   tp.onclick = () => scrollTo({ top: 0, behavior: 'smooth' });
