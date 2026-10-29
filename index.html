@@ -8,7 +8,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="style.css">
 </head>
@@ -36,29 +36,31 @@
 
   <main id="conteudo-principal">
     
-    <!-- Tela Inicial sem os quadrados sobre a logo -->
-    <section id="capa" class="hero reveal">
+    <!-- Tela Inicial Densa e Elegante -->
+    <section id="capa" class="hero">
       <div class="stars" id="stars" aria-hidden="true"></div>
       
       <div class="hero-in">
-        <div class="logo-wrap">
+        <div class="logo-wrap anim-hero-1">
+          <div class="logo-glow"></div>
           <img src="logo.jpg" alt="Logotipo do Colégio" class="logo" onerror="this.style.display='none'; document.getElementById('logo-fallback').hidden=false;">
           <div id="logo-fallback" class="logo-fallback" hidden>
             <span>C.E.I.A.S.</span>
           </div>
         </div>
         
-        <h1 class="titulo-principal">Colégio Irmã Ambrósia Sabatovich</h1>
-        <p class="sub">Ensino Fundamental e Médio · <strong>"Educando para a comunidade"</strong></p>
+        <p class="kicker anim-hero-2">Colônia Marcelino · São José dos Pinhais - PR</p>
+        <h1 class="titulo-principal anim-hero-2">Colégio Estadual do Campo<br><em>Irmã Ambrósia Sabatovich</em></h1>
+        <p class="sub anim-hero-3">Ensino Fundamental e Médio · <strong>"Educando para a comunidade"</strong></p>
         
-        <div class="cta">
-          <a class="btn btn-primary ripple" href="#calendario">Ver Calendário</a>
+        <div class="cta anim-hero-4">
+          <a class="btn btn-primary ripple pulse-btn" href="#calendario">Ver Calendário</a>
           <a class="btn btn-ghost ripple" href="#contato">Falar com a Secretaria</a>
         </div>
       </div>
     </section>
 
-    <!-- Valores e Lema -->
+    <!-- Nossos Valores & Lema -->
     <section id="acesso" class="sec acesso reveal">
       <div class="container">
         <div class="head-center">
@@ -106,7 +108,7 @@
       </div>
     </section>
 
-    <!-- Nossa Equipe (Abas Interativas Funcionando) -->
+    <!-- Nossa Equipe (Com Todos os Professores do Documento) -->
     <section id="equipe" class="sec equipe reveal">
       <div class="container">
         <div class="head-center">
@@ -114,19 +116,18 @@
           <h2>Nossa Equipe</h2>
         </div>
 
-        <!-- Botões das Abas -->
         <div class="equipe-tabs">
           <button class="tab-btn active ripple" data-tab="tab-direcao">Direção</button>
           <button class="tab-btn ripple" data-tab="tab-pedagogia">Pedagogia</button>
-          <button class="tab-btn ripple" data-tab="tab-professores">Professores</button>
+          <button class="tab-btn ripple" data-tab="tab-professores">Professores (18)</button>
         </div>
 
-        <!-- Conteúdo Aba Direção -->
+        <!-- Direção -->
         <div id="tab-direcao" class="tab-content active">
-          <div class="grid-compacta">
+          <div class="grid-compacta centralizada">
             <div class="card-prof-compacto tilt-effect">
               <div class="foto-container">
-                <img src="foto-karina.jpg" alt="Foto da Diretora Karina" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.hidden=false;">
+                <img src="foto-karina.jpg" alt="Diretora Karina" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.hidden=false;">
                 <div class="foto-placeholder">👩‍💼</div>
               </div>
               <div class="prof-info">
@@ -137,12 +138,12 @@
           </div>
         </div>
 
-        <!-- Conteúdo Aba Pedagogia -->
+        <!-- Pedagogia -->
         <div id="tab-pedagogia" class="tab-content">
-          <div class="grid-compacta">
+          <div class="grid-compacta centralizada">
             <div class="card-prof-compacto tilt-effect">
               <div class="foto-container">
-                <img src="foto-sheila.jpg" alt="Foto da Pedagoga Sheila" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.hidden=false;">
+                <img src="foto-sheila.jpg" alt="Pedagoga Sheila" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.hidden=false;">
                 <div class="foto-placeholder">👩‍🏫</div>
               </div>
               <div class="prof-info">
@@ -153,7 +154,7 @@
 
             <div class="card-prof-compacto tilt-effect">
               <div class="foto-container">
-                <img src="foto-lucimara.jpg" alt="Foto da Pedagoga Lucimara" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.hidden=false;">
+                <img src="foto-lucimara.jpg" alt="Pedagoga Lucimara" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.hidden=false;">
                 <div class="foto-placeholder">👩‍🏫</div>
               </div>
               <div class="prof-info">
@@ -164,7 +165,7 @@
 
             <div class="card-prof-compacto tilt-effect">
               <div class="foto-container">
-                <img src="foto-adriana.jpg" alt="Foto da Pedagoga Adriana" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.hidden=false;">
+                <img src="foto-adriana.jpg" alt="Pedagoga Adriana" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.hidden=false;">
                 <div class="foto-placeholder">👩‍🏫</div>
               </div>
               <div class="prof-info">
@@ -175,7 +176,7 @@
           </div>
         </div>
 
-        <!-- Conteúdo Aba Professores (Carrossel Slidável) -->
+        <!-- Professores (Lista Completa Unificada) -->
         <div id="tab-professores" class="tab-content">
           <div class="carrossel-wrapper">
             <button class="carrossel-arrow prev ripple" id="arrowPrev" aria-label="Anterior">‹</button>
@@ -188,12 +189,12 @@
 
               <div class="card-prof-compacto tilt-effect">
                 <div class="foto-container"><img src="foto-susana.jpg" alt="Susana" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.hidden=false;"><div class="foto-placeholder">👩‍🏫</div></div>
-                <div class="prof-info"><h4>Susana</h4><p class="disciplina-texto">Português e Inglês</p></div>
+                <div class="prof-info"><h4>Susana</h4><p class="disciplina-texto">Língua Portuguesa e Língua Inglesa</p></div>
               </div>
 
               <div class="card-prof-compacto tilt-effect">
                 <div class="foto-container"><img src="foto-giovana.jpg" alt="Giovana" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.hidden=false;"><div class="foto-placeholder">👩‍🏫</div></div>
-                <div class="prof-info"><h4>Giovana</h4><p class="disciplina-texto">Português e Inglês</p></div>
+                <div class="prof-info"><h4>Giovana</h4><p class="disciplina-texto">Língua Portuguesa e Língua Inglesa</p></div>
               </div>
 
               <div class="card-prof-compacto tilt-effect">
@@ -203,17 +204,17 @@
 
               <div class="card-prof-compacto tilt-effect">
                 <div class="foto-container"><img src="foto-paula.jpg" alt="Paula" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.hidden=false;"><div class="foto-placeholder">👩‍🏫</div></div>
-                <div class="prof-info"><h4>Paula</h4><p class="disciplina-texto">Matemática e Ed. Financeira</p></div>
+                <div class="prof-info"><h4>Paula</h4><p class="disciplina-texto">Matemática e Educação Financeira</p></div>
               </div>
 
               <div class="card-prof-compacto tilt-effect">
                 <div class="foto-container"><img src="foto-cristian.jpg" alt="Cristian" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.hidden=false;"><div class="foto-placeholder">👨‍🏫</div></div>
-                <div class="prof-info"><h4>Cristian</h4><p class="disciplina-texto">Matemática, Física e Robótica</p></div>
+                <div class="prof-info"><h4>Cristian</h4><p class="disciplina-texto">Matemática, Física, Robótica e Ed. Financeira</p></div>
               </div>
 
               <div class="card-prof-compacto tilt-effect">
                 <div class="foto-container"><img src="foto-adilson.jpg" alt="Adilson" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.hidden=false;"><div class="foto-placeholder">👨‍🏫</div></div>
-                <div class="prof-info"><h4>Adilson</h4><p class="disciplina-texto">Matemática e Ed. Financeira</p></div>
+                <div class="prof-info"><h4>Adilson</h4><p class="disciplina-texto">Matemática e Educação Financeira</p></div>
               </div>
 
               <div class="card-prof-compacto tilt-effect">
@@ -253,7 +254,7 @@
 
               <div class="card-prof-compacto tilt-effect">
                 <div class="foto-container"><img src="foto-roberto.jpg" alt="Roberto" class="foto-prof" onerror="this.style.display='none'; this.nextElementSibling.hidden=false;"><div class="foto-placeholder">👨‍🏫</div></div>
-                <div class="prof-info"><h4>Roberto</h4><p class="disciplina-texto">Ed. Física, Programação e IA</p></div>
+                <div class="prof-info"><h4>Roberto</h4><p class="disciplina-texto">Educação Física e Programação/IA</p></div>
               </div>
 
               <div class="card-prof-compacto tilt-effect">
@@ -358,7 +359,7 @@
       </div>
     </section>
 
-    <!-- Secretaria Escolar & Localização (Telefone removido) -->
+    <!-- Secretaria Escolar & Localização -->
     <section id="contato" class="sec contato reveal">
       <div class="container">
         <div class="head-center">

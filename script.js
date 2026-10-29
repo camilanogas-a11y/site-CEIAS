@@ -44,11 +44,11 @@ const arrowPrev = document.getElementById('arrowPrev');
 const arrowNext = document.getElementById('arrowNext');
 
 if (track && arrowPrev && arrowNext) {
-  arrowPrev.addEventListener('click', () => { track.scrollBy({ left: -220, behavior: 'smooth' }); });
-  arrowNext.addEventListener('click', () => { track.scrollBy({ left: 220, behavior: 'smooth' }); });
+  arrowPrev.addEventListener('click', () => { track.scrollBy({ left: -240, behavior: 'smooth' }); });
+  arrowNext.addEventListener('click', () => { track.scrollBy({ left: 240, behavior: 'smooth' }); });
 }
 
-// Animação de Revelação
+// Animação de Revelação ao Rolar
 const io = new IntersectionObserver(es => es.forEach(e => {
   if (e.isIntersecting) {
     e.target.classList.add('in');
