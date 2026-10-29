@@ -1,8 +1,8 @@
-// Estrelas Flutuantes Mais Visíveis e Brilhantes
+// Estrelas flutuantes na capa
 const sc = document.getElementById('stars'), cores = ['#d9a31a', '#fadb5f', '#f2ab09', '#ffffff', '#e8b835'];
 if (sc) {
   for (let i = 0; i < 22; i++) {
-    const s = document.createElement('span'), z = 10 + Math.random() * 12; // Tamanho maior
+    const s = document.createElement('span'), z = 10 + Math.random() * 12;
     s.className = 'star';
     s.style.cssText = `left:${Math.random() * 100}%;width:${z}px;height:${z}px;--c:${cores[i % 5]};--o:${.6 + Math.random() * .4};--t:${8 + Math.random() * 10}s;--dl:-${Math.random() * 15}s;--x:${(Math.random() - .5) * 60}px`;
     sc.appendChild(s);
@@ -62,7 +62,7 @@ if (elAno) elAno.textContent = new Date().getFullYear();
 const elFooter = document.getElementById('anoFooter');
 if (elFooter) elFooter.textContent = new Date().getFullYear();
 
-// Calendário Escolar
+// Calendário Escolar 2026
 const SEED = [
   ['2026-01-01', 'feriado', 'Ano Novo'], ['2026-04-03', 'feriado', 'Paixão de Cristo'], ['2026-04-05', 'feriado', 'Páscoa'], ['2026-04-21', 'feriado', 'Tiradentes'],
   ['2026-05-01', 'feriado', 'Dia do Trabalho'], ['2026-06-04', 'feriado', 'Corpus Christi'], ['2026-09-07', 'feriado', 'Independência'], ['2026-10-12', 'feriado', 'N. Sra. Aparecida'],
