@@ -190,16 +190,17 @@ nav a:hover, nav a.ativo { color: var(--blue); }
 
 .sec { padding: 5rem 0; position: relative; }
 
-/* Grid Valores */
+/* Grid Geral de Cartões */
 .ac-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
 .card-forma {
   background: var(--white); padding: 2rem; border-radius: var(--radius-md);
   box-shadow: var(--shadow-soft); border: 1px solid rgba(27, 75, 155, 0.08);
+  display: flex; flex-direction: column; justify-content: space-between;
 }
 .badge-tag {
   display: inline-block; background: var(--sky); color: var(--blue-dark);
   font-size: 0.75rem; font-weight: 800; text-transform: uppercase;
-  padding: 0.3rem 0.8rem; border-radius: 99px; margin-bottom: 0.7rem;
+  padding: 0.3rem 0.8rem; border-radius: 99px; margin-bottom: 0.7rem; align-self: flex-start;
 }
 .lista-valores { list-style: none; padding: 0; margin: 0; }
 .lista-valores li { margin-bottom: 0.9rem; padding-bottom: 0.7rem; border-bottom: 1px dashed rgba(27,75,155,0.12); }
@@ -226,8 +227,16 @@ nav a:hover, nav a.ativo { color: var(--blue); }
 .float-anim-delay { animation: floatSlow 6s 3s ease-in-out infinite; }
 @keyframes floatSlow { 50% { transform: translateY(-8px); } }
 
+/* ÁREA DO ALUNO (TOTALMENTE INTEGRADA AO ESTILO) */
+.alunos { background: var(--sage); }
+.card-aluno-item { text-decoration: none; color: inherit; }
+.aluno-card-header { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.5rem; }
+.icon-aluno { font-size: 1.6rem; }
+.card-aluno-item h3 { margin: 0; font-size: 1.2rem; color: var(--blue-dark); }
+.card-aluno-item p { font-size: 0.88rem; color: var(--mut); margin-bottom: 1.2rem; line-height: 1.5; }
+
 /* Nossa Equipe com Abas */
-.equipe { background: var(--sage); }
+.equipe { background: var(--white); }
 .equipe-tabs { display: flex; justify-content: center; gap: 0.8rem; margin-bottom: 2.2rem; }
 .tab-btn {
   background: var(--white); border: 1px solid rgba(27, 75, 155, 0.15); padding: 0.7rem 1.6rem;
@@ -280,29 +289,6 @@ nav a:hover, nav a.ativo { color: var(--blue); }
 .carrossel-arrow:hover { background: var(--blue); color: #fff; transform: translateY(-50%) scale(1.1); }
 .carrossel-arrow.prev { left: -18px; }
 .carrossel-arrow.next { right: -18px; }
-
-/* ÁREA DO ALUNO (ESTILO DOS CARDS) */
-.alunos { background: var(--white); }
-.grid-links-alunos {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.6rem;
-}
-.card-link-aluno {
-  background: var(--sage); padding: 1.8rem; border-radius: var(--radius-md);
-  box-shadow: var(--shadow-soft); display: flex; flex-direction: column; justify-content: space-between;
-  border: 1px solid rgba(27, 75, 155, 0.08); text-decoration: none; color: inherit;
-}
-.icon-aluno-box {
-  width: 48px; height: 48px; border-radius: 50%; background: var(--sky);
-  display: grid; place-items: center; font-size: 1.5rem; margin-bottom: 1rem;
-}
-.info-link-aluno h3 { font-size: 1.25rem; margin-bottom: 0.4rem; color: var(--blue-dark); }
-.info-link-aluno p { font-size: 0.88rem; color: var(--mut); margin-bottom: 1.2rem; }
-.btn-link-aluno {
-  align-self: flex-start; font-size: 0.82rem; font-weight: 700; color: var(--white);
-  background: var(--blue); padding: 0.4rem 0.9rem; border-radius: 99px;
-  transition: background 0.2s;
-}
-.card-link-aluno:hover .btn-link-aluno { background: var(--blue-dark); }
 
 /* Projetos */
 .projetos { background: var(--sage); }
@@ -406,7 +392,7 @@ nav a:hover, nav a.ativo { color: var(--blue); }
 .info-contato { flex: 1; display: flex; flex-direction: column; }
 .info-contato small { font-size: 0.72rem; text-transform: uppercase; color: var(--mut); font-weight: 700; }
 .info-contato strong { font-size: 0.9rem; color: var(--blue-dark); word-break: break-all; }
-.btn-ação-sm { font-size: 0.78rem; font-weight: 700; color: var(--blue); background: var(--sky); padding: 0.3rem 0.7rem; border-radius: 99px; }
+.btn-ação-sm { font-size: 0.78rem; font-weight: 700; color: var(--blue); background: var(--sky); padding: 0.3rem 0.7rem; border-radius: 99px; align-self: flex-start; }
 
 .mapa-wrapper { border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1.4rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
 
