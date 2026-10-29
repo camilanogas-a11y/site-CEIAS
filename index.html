@@ -2,29 +2,32 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Colégio Estadual do Campo Irmã Ambrósia Sabatovich</title>
   <meta name="description" content="Site oficial do Colégio Estadual do Campo Irmã Ambrósia Sabatovich - Educando para a comunidade.">
+  
+  <!-- Fontes Oficiais: Lora (Títulos) e Inter (Texto e Interface) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Atalho de acessibilidade para leitores de tela -->
+  <!-- Atalho de Acessibilidade -->
   <a href="#conteudo-principal" class="sr-only">Pular para o conteúdo principal</a>
 
   <!-- Navegação Principal -->
   <header class="nav" role="banner">
-    <a href="#capa" class="brand" aria-label="Ir para o topo da página do CEIAS">C.E.I.A.S.</a>
+    <a href="#capa" class="brand" aria-label="Página inicial C.E.I.A.S.">C.E.I.A.S.</a>
     <button class="burger" id="burger" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu">
       <span></span><span></span><span></span>
     </button>
     <nav id="menu" role="navigation" aria-label="Menu principal">
-      <a href="#acesso">Acesso rápido</a>
-      <a href="#escola">O colégio</a>
-      <a href="#equipe">Nossa equipe</a>
+      <a href="#acesso">Acesso Rápido</a>
+      <a href="#escola">O Colégio</a>
+      <a href="#equipe">Nossa Equipe</a>
       <a href="#projetos">Projetos</a>
       <a href="#calendario">Calendário</a>
       <a href="#contato">Contato</a>
@@ -32,6 +35,7 @@
   </header>
 
   <main id="conteudo-principal">
+    
     <!-- Capa / Hero -->
     <section id="capa" class="hero reveal">
       <div class="stars" id="stars" aria-hidden="true"></div>
@@ -40,14 +44,15 @@
       <div class="hero-in">
         <div class="logo-wrap">
           <div class="halo" aria-hidden="true"></div>
-          <img src="logo.jpg" alt="Logotipo do Colégio Estadual do Campo Irmã Ambrósia Sabatovich" class="logo">
+          <!-- Espaço reservado para a logo oficial com tratamento para fundo -->
+          <img src="logo.jpg" alt="Logotipo do Colégio Estadual do Campo Irmã Ambrósia Sabatovich" class="logo" onerror="this.style.display='none'">
         </div>
         <p class="kicker">Colônia Marcelino · São José dos Pinhais · PR</p>
         <h1>Colégio Estadual do Campo<br><em>Irmã Ambrósia Sabatovich</em></h1>
         <p class="sub">Ensino Fundamental e Médio · <strong>"Educando para a comunidade"</strong></p>
         <div class="cta">
-          <a class="btn" href="#calendario">Ver calendário</a>
-          <a class="btn ghost" href="#contato">Falar com a secretaria</a>
+          <a class="btn" href="#calendario">Ver Calendário</a>
+          <a class="btn ghost" href="#contato">Falar com a Secretaria</a>
         </div>
       </div>
     </section>
@@ -55,37 +60,35 @@
     <!-- Acesso Rápido / Valores e Lema -->
     <section id="acesso" class="sec acesso reveal">
       <div class="head">
-        <p class="kicker">Identidade e princípios</p>
+        <p class="kicker">Identidade e Princípios</p>
         <h2>Nossos Valores & Lema</h2>
       </div>
       <div class="ac-grid">
-        <div class="ac">
+        <div class="ac-card">
           <h3>Nosso Lema</h3>
-          <p style="font-size: 1.15rem; font-weight: 700; color: var(--blue); border-left: 4px solid var(--gold); padding-left: 1rem; margin-top: 1rem;">
-            "Educando para a comunidade"
-          </p>
-          <p style="margin-top: 0.8rem; font-size: 0.95rem; color: var(--mut);">
+          <p class="lema-destaque">"Educando para a comunidade"</p>
+          <p class="ac-desc">
             Buscamos unir o aprendizado escolar às raízes e necessidades da Colônia Marcelino, fortalecendo os laços comunitários e o protagonismo dos estudantes.
           </p>
         </div>
-        <div class="ac">
+        <div class="ac-card">
           <h3>Valores Norteadores</h3>
-          <ul class="links" style="list-style: none; padding: 0;">
-            <li style="margin-bottom: 0.8rem;">
-              <strong style="color: var(--ink);">Comunidade e Pertencimento</strong>
-              <span style="display: block; font-size: 0.85rem; color: var(--mut);">Valorização da cultura local e do ambiente do campo.</span>
+          <ul class="lista-valores">
+            <li>
+              <strong>Comunidade e Pertencimento</strong>
+              <span>Valorização da cultura local e do ambiente do campo.</span>
             </li>
-            <li style="margin-bottom: 0.8rem;">
-              <strong style="color: var(--ink);">Compromisso e Qualidade</strong>
-              <span style="display: block; font-size: 0.85rem; color: var(--mut);">Dedicação constante ao ensino público gratuito e transformador.</span>
+            <li>
+              <strong>Compromisso e Qualidade</strong>
+              <span>Dedicação constante ao ensino público gratuito e transformador.</span>
             </li>
-            <li style="margin-bottom: 0.8rem;">
-              <strong style="color: var(--ink);">Respeito e Cidadania</strong>
-              <span style="display: block; font-size: 0.85rem; color: var(--mut);">Formação ética, inclusiva e colaborativa para a vida em sociedade.</span>
+            <li>
+              <strong>Respeito e Cidadania</strong>
+              <span>Formação ética, inclusiva e colaborativa para a vida em sociedade.</span>
             </li>
           </ul>
         </div>
-        <div class="ac">
+        <div class="ac-card">
           <h3>Próximos Eventos</h3>
           <ul id="prox" aria-live="polite"></ul>
         </div>
@@ -94,92 +97,296 @@
 
     <!-- O Colégio -->
     <section id="escola" class="sec escola reveal">
-      <div>
-        <p class="kicker">Nossa estrutura</p>
+      <div class="escola-texto">
+        <p class="kicker">Nossa Estrutura</p>
         <h2>O Colégio</h2>
         <p>Oferecemos ensino público de qualidade focado no desenvolvimento integral dos alunos da região do campo, aliando conhecimento científico, tradição e valorização comunitária.</p>
       </div>
       <div class="gal" role="region" aria-label="Galeria de fotos do colégio">
-        <div class="ph p1">Foto da Estrutura</div>
-        <div class="ph p2">Espaço do Campo</div>
-        <div class="ph p3">Atividades Escolares</div>
+        <div class="ph p1">Espaço Escolar</div>
+        <div class="ph p2">Ambiente do Campo</div>
+        <div class="ph p3">Atividades Pedagógicas</div>
       </div>
     </section>
 
-    <!-- Equipe (Direção e Professores) -->
+    <!-- Nossa Equipe (Direção, Pedagogia e Professores) -->
     <section id="equipe" class="sec equipe reveal">
-      <p class="kicker">Corpo docente e administrativo</p>
+      <p class="kicker">Corpo Docente e Administrativo</p>
       <h2>Nossa Equipe</h2>
 
-      <div class="grp">Direção e Pedagogia</div>
-      <div class="equipe-grid">
-        <div class="card-membro">
-          <span class="cargo-tag">Diretora</span>
-          <h4>Karina</h4>
+      <!-- Bloco Direção e Pedagogia -->
+      <div class="subsecao-titulo">Direção e Pedagogia</div>
+      <div class="equipe-grid equipe-gestao">
+        
+        <div class="card-pessoal">
+          <div class="foto-box">
+            <!-- Substitua o atributo src pela foto real: src="fotos/karina.jpg" -->
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='%231f4e9c'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>" alt="Foto de Karina" class="foto-prof">
+          </div>
+          <div class="info-prof">
+            <h4>Karina</h4>
+            <span class="cargo-tag">Diretora Geral</span>
+          </div>
         </div>
-        <div class="card-membro">
-          <span class="cargo-tag">Pedagoga</span>
-          <h4>Sheila</h4>
+
+        <div class="card-pessoal">
+          <div class="foto-box">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='%231f4e9c'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>" alt="Foto de Sheila" class="foto-prof">
+          </div>
+          <div class="info-prof">
+            <h4>Sheila</h4>
+            <span class="cargo-tag">Pedagoga</span>
+          </div>
         </div>
-        <div class="card-membro">
-          <span class="cargo-tag">Pedagoga</span>
-          <h4>Lucimara</h4>
+
+        <div class="card-pessoal">
+          <div class="foto-box">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='%231f4e9c'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>" alt="Foto de Lucimara" class="foto-prof">
+          </div>
+          <div class="info-prof">
+            <h4>Lucimara</h4>
+            <span class="cargo-tag">Pedagoga</span>
+          </div>
         </div>
-        <div class="card-membro">
-          <span class="cargo-tag">Pedagoga</span>
-          <h4>Adriana</h4>
+
+        <div class="card-pessoal">
+          <div class="foto-box">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='%231f4e9c'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>" alt="Foto de Adriana" class="foto-prof">
+          </div>
+          <div class="info-prof">
+            <h4>Adriana</h4>
+            <span class="cargo-tag">Pedagoga</span>
+          </div>
         </div>
+
       </div>
 
-      <div class="grp" style="margin-top: 3rem;">Professores</div>
-      <div class="professores-grid">
-        <div class="card-prof"><strong>Filosofia:</strong> Maike</div>
-        <div class="card-prof"><strong>Língua Inglesa:</strong> Susana, Giovana</div>
-        <div class="card-prof"><strong>Matemática:</strong> Henrique, Paula, Cristian, Adilson</div>
-        <div class="card-prof"><strong>Sociologia:</strong> Rafael</div>
-        <div class="card-prof"><strong>Artes:</strong> Sandra</div>
-        <div class="card-prof"><strong>Química:</strong> Marcos</div>
-        <div class="card-prof"><strong>Física:</strong> Cristian</div>
-        <div class="card-prof"><strong>História:</strong> Vandré</div>
-        <div class="card-prof"><strong>Ciências:</strong> Malu, Erli</div>
-        <div class="card-prof"><strong>Biologia:</strong> Erli</div>
-        <div class="card-prof"><strong>Educação Física:</strong> Emerson, Roberto</div>
-        <div class="card-prof"><strong>Língua Portuguesa:</strong> Susana, Giovana, Rodrigo, Alceu</div>
-        <div class="card-prof"><strong>Geografia:</strong> Sidney</div>
-        <div class="card-prof"><strong>Programação / IA:</strong> Roberto</div>
-        <div class="card-prof"><strong>Educação Financeira:</strong> Paula, Cristian, Adilson</div>
-        <div class="card-prof"><strong>Robótica:</strong> Cristian</div>
+      <!-- Bloco Professores -->
+      <div class="subsecao-titulo">Corpo Docente</div>
+      <div class="equipe-grid equipe-professores">
+        
+        <div class="card-pessoal">
+          <div class="foto-box">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='%2353607a'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>" alt="Foto do Prof. Maike" class="foto-prof">
+          </div>
+          <div class="info-prof">
+            <h4>Maike</h4>
+            <p class="disciplina">Filosofia</p>
+          </div>
+        </div>
+
+        <div class="card-pessoal">
+          <div class="foto-box">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='%2353607a'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>" alt="Foto da Profa. Susana" class="foto-prof">
+          </div>
+          <div class="info-prof">
+            <h4>Susana</h4>
+            <p class="disciplina">Língua Portuguesa e Língua Inglesa</p>
+          </div>
+        </div>
+
+        <div class="card-pessoal">
+          <div class="foto-box">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='%2353607a'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>" alt="Foto da Profa. Giovana" class="foto-prof">
+          </div>
+          <div class="info-prof">
+            <h4>Giovana</h4>
+            <p class="disciplina">Língua Portuguesa e Língua Inglesa</p>
+          </div>
+        </div>
+
+        <div class="card-pessoal">
+          <div class="foto-box">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='%2353607a'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>" alt="Foto do Prof. Henrique" class="foto-prof">
+          </div>
+          <div class="info-prof">
+            <h4>Henrique</h4>
+            <p class="disciplina">Matemática</p>
+          </div>
+        </div>
+
+        <div class="card-pessoal">
+          <div class="foto-box">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='%2353607a'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>" alt="Foto da Profa. Paula" class="foto-prof">
+          </div>
+          <div class="info-prof">
+            <h4>Paula</h4>
+            <p class="disciplina">Matemática e Educação Financeira</p>
+          </div>
+        </div>
+
+        <div class="card-pessoal">
+          <div class="foto-box">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='%2353607a'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>" alt="Foto do Prof. Cristian" class="foto-prof">
+          </div>
+          <div class="info-prof">
+            <h4>Cristian</h4>
+            <p class="disciplina">Matemática, Física, Robótica e Ed. Financeira</p>
+          </div>
+        </div>
+
+        <div class="card-pessoal">
+          <div class="foto-box">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='%2353607a'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>" alt="Foto do Prof. Adilson" class="foto-prof">
+          </div>
+          <div class="info-prof">
+            <h4>Adilson</h4>
+            <p class="disciplina">Matemática e Educação Financeira</p>
+          </div>
+        </div>
+
+        <div class="card-pessoal">
+          <div class="foto-box">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='%2353607a'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>" alt="Foto do Prof. Rafael" class="foto-prof">
+          </div>
+          <div class="info-prof">
+            <h4>Rafael</h4>
+            <p class="disciplina">Sociologia</p>
+          </div>
+        </div>
+
+        <div class="card-pessoal">
+          <div class="foto-box">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='%2353607a'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>" alt="Foto da Profa. Sandra" class="foto-prof">
+          </div>
+          <div class="info-prof">
+            <h4>Sandra</h4>
+            <p class="disciplina">Artes</p>
+          </div>
+        </div>
+
+        <div class="card-pessoal">
+          <div class="foto-box">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='%2353607a'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>" alt="Foto do Prof. Marcos" class="foto-prof">
+          </div>
+          <div class="info-prof">
+            <h4>Marcos</h4>
+            <p class="disciplina">Química</p>
+          </div>
+        </div>
+
+        <div class="card-pessoal">
+          <div class="foto-box">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='%2353607a'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>" alt="Foto do Prof. Vandré" class="foto-prof">
+          </div>
+          <div class="info-prof">
+            <h4>Vandré</h4>
+            <p class="disciplina">História</p>
+          </div>
+        </div>
+
+        <div class="card-pessoal">
+          <div class="foto-box">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='%2353607a'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>" alt="Foto da Profa. Malu" class="foto-prof">
+          </div>
+          <div class="info-prof">
+            <h4>Malu</h4>
+            <p class="disciplina">Ciências</p>
+          </div>
+        </div>
+
+        <div class="card-pessoal">
+          <div class="foto-box">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='%2353607a'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>" alt="Foto da Profa. Erli" class="foto-prof">
+          </div>
+          <div class="info-prof">
+            <h4>Erli</h4>
+            <p class="disciplina">Ciências e Biologia</p>
+          </div>
+        </div>
+
+        <div class="card-pessoal">
+          <div class="foto-box">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='%2353607a'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>" alt="Foto do Prof. Emerson" class="foto-prof">
+          </div>
+          <div class="info-prof">
+            <h4>Emerson</h4>
+            <p class="disciplina">Educação Física</p>
+          </div>
+        </div>
+
+        <div class="card-pessoal">
+          <div class="foto-box">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='%2353607a'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>" alt="Foto do Prof. Roberto" class="foto-prof">
+          </div>
+          <div class="info-prof">
+            <h4>Roberto</h4>
+            <p class="disciplina">Educação Física, Programação e IA</p>
+          </div>
+        </div>
+
+        <div class="card-pessoal">
+          <div class="foto-box">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='%2353607a'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>" alt="Foto do Prof. Rodrigo" class="foto-prof">
+          </div>
+          <div class="info-prof">
+            <h4>Rodrigo</h4>
+            <p class="disciplina">Língua Portuguesa</p>
+          </div>
+        </div>
+
+        <div class="card-pessoal">
+          <div class="foto-box">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='%2353607a'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>" alt="Foto do Prof. Alceu" class="foto-prof">
+          </div>
+          <div class="info-prof">
+            <h4>Alceu</h4>
+            <p class="disciplina">Língua Portuguesa</p>
+          </div>
+        </div>
+
+        <div class="card-pessoal">
+          <div class="foto-box">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='%2353607a'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>" alt="Foto do Prof. Sidney" class="foto-prof">
+          </div>
+          <div class="info-prof">
+            <h4>Sidney</h4>
+            <p class="disciplina">Geografia</p>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <!-- Espaço dos Alunos (Projetos) -->
+    <!-- Projetos e Protagonismo Estudantil (Destaque Editorial Único) -->
     <section id="projetos" class="sec projetos reveal">
-      <p class="kicker">Mural de destaques</p>
-      <h2>Projetos dos Alunos</h2>
-      <p style="margin-bottom: 2rem;">Espaço dedicado ao protagonismo, criatividade e conquistas científicas e culturais dos nossos estudantes.</p>
+      <p class="kicker">Aprendizado na Prática</p>
+      <h2>Projetos e Protagonismo Estudantil</h2>
       
-      <div class="projetos-grid">
-        <div class="card-projeto">
-          <div class="ph-projeto">🎨 Arte & Cultura</div>
-          <h3>Exposição Cultural da Colônia</h3>
-          <p>Trabalhos de valorização da história e das tradições da comunidade da Colônia Marcelino.</p>
+      <div class="editorial-container">
+        <div class="editorial-midia">
+          <!-- Espaço para foto real das atividades escolares dos alunos -->
+          <div class="editorial-foto-placeholder">
+            <span>📸 Imagem das Atividades Escolares</span>
+            <small>Espaço reservado para foto real dos alunos em aula ou projeto</small>
+          </div>
         </div>
-        <div class="card-projeto">
-          <div class="ph-projeto">🤖 Robótica & IA</div>
-          <h3>Inovação no Campo</h3>
-          <p>Projetos desenvolvidos nas aulas de Robótica e Programação aplicados ao cotidiano rural.</p>
-        </div>
-        <div class="card-projeto">
-          <div class="ph-projeto">🌱 Meio Ambiente</div>
-          <h3>Horta e Sustentabilidade</h3>
-          <p>Iniciativa integrando conteúdos de Ciências e Biologia na preservação ambiental do entorno.</p>
+        <div class="editorial-conteudo">
+          <h3>Incentivo ao Conhecimento e à Comunidade</h3>
+          <p>
+            No Colégio Estadual do Campo Irmã Ambrósia Sabatovich, o aprendizado vai além da sala de aula. Estimulamos a curiosidade científica, o trabalho colaborativo e o protagonismo dos estudantes por meio de atividades práticas integradas à realidade local.
+          </p>
+          <p>
+            Desenvolvemos iniciativas contínuas que conectam tradição, inovação tecnológica e sustentabilidade:
+          </p>
+          <ul class="eixos-projetos">
+            <li>
+              <strong>Cultura e Identidade Local:</strong> Valorização das raízes históricas e culturais da Colônia Marcelino.
+            </li>
+            <li>
+              <strong>Robótica e Programação:</strong> Introdução às novas tecnologias, lógica e inteligência artificial no ambiente escolar.
+            </li>
+            <li>
+              <strong>Meio Ambiente e Sustentabilidade:</strong> Conscientização ecológica e integração com a vida no campo.
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
     <!-- Calendário Escolar -->
     <section id="calendario" class="sec cal reveal">
-      <p class="kicker">Datas e compromissos</p>
+      <p class="kicker">Datas e Compromissos</p>
       <h2>Calendário Escolar <span id="ano"></span></h2>
 
       <div class="vis" role="group" aria-label="Modo de visualização do calendário">
@@ -225,136 +432,82 @@
       </div>
     </section>
 
-    <!-- Contato e Localização em Dois Quadrados -->
+    <!-- Secretaria Escolar e Contato com Mapa Incorporado Real -->
     <section id="contato" class="sec contato reveal">
-      <p class="kicker">Atendimento e localização</p>
-      <h2>Fale Conosco & Visite-nos</h2>
+      <p class="kicker">Atendimento e Localização</p>
+      <h2>Secretaria Escolar e Contato</h2>
 
-      <div class="grid-contato-localizacao">
+      <div class="grid-contato-institucional">
         
-        <!-- Quadrado 1: Informações de Contato -->
-        <div class="card-contato-wrapper">
-          <div class="card-contato-top">
-            <span class="tag-atendimento">Atendimento Oficial</span>
-            <h3>Secretaria Escolar</h3>
-            <p class="desc-secretaria">
-              Atendimento para matrículas, declarações, histórico escolar e informações gerais.
-            </p>
-          </div>
+        <!-- A) Fale com a Secretaria -->
+        <div class="card-institucional">
+          <span class="badge-atendimento">Atendimento Oficial</span>
+          <h3>Secretaria Escolar</h3>
+          <p class="desc-atendimento">
+            Entre em contato com nossa equipe para informações sobre matrículas, emissão de declarações, histórico escolar e atendimento à comunidade.
+          </p>
 
-          <div class="contato-items">
-            <!-- Telefone / WhatsApp -->
-            <a href="https://wa.me/5541998320153" target="_blank" class="contato-item" title="Clique para chamar no WhatsApp">
-              <div class="icon-circle">📞</div>
-              <div class="item-text">
+          <div class="lista-contatos">
+            <a href="https://wa.me/5541998320153" target="_blank" rel="noopener noreferrer" class="item-contato-link" title="Abrir conversa no WhatsApp">
+              <div class="icone-box">📱</div>
+              <div class="contato-detalhe">
                 <small>Telefone / WhatsApp</small>
                 <strong>(41) 99832-0153</strong>
               </div>
-              <span class="action-hint">Chamar ›</span>
+              <span class="btn-acao-sm">WhatsApp ›</span>
             </a>
 
-            <!-- E-mail que abre formulário direto no site -->
-            <div class="contato-item" id="btnAbrirFormEmail" title="Clique para enviar mensagem direta">
-              <div class="icon-circle">✉️</div>
-              <div class="item-text">
-                <small>E-mail Oficial</small>
+            <a href="mailto:sjpambrosiasabatovich@escola.pr.gov.br" class="item-contato-link" title="Enviar e-mail">
+              <div class="icone-box">✉️</div>
+              <div class="contato-detalhe">
+                <small>E-mail Institucional</small>
                 <strong>sjpambrosiasabatovich@escola.pr.gov.br</strong>
               </div>
-              <span class="action-hint">Escrever</span>
-            </div>
+              <span class="btn-acao-sm">E-mail ›</span>
+            </a>
           </div>
         </div>
 
-        <!-- Quadrado 2: Localização com Ícone do Maps -->
-        <div class="card-contato-wrapper">
-          <div class="card-contato-top">
-            <span class="tag-atendimento tag-gold">Endereço do Colégio</span>
-            <h3>Nossa Localização</h3>
-            <p class="desc-secretaria">
-              Colégio Estadual do Campo Irmã Ambrósia Sabatovich
-            </p>
+        <!-- B) Onde Estamos com Google Maps Incorporado -->
+        <div class="card-institucional">
+          <span class="badge-atendimento badge-gold">Localização</span>
+          <h3>Onde Estamos</h3>
+          <p class="desc-atendimento">
+            <strong>Colégio Estadual do Campo Irmã Ambrósia Sabatovich</strong><br>
+            Colônia Marcelino · Área Rural · São José dos Pinhais - PR
+          </p>
+
+          <!-- Incorporação Real e Segura do Google Maps (Sem chave de API exposta) -->
+          <div class="mapa-container">
+            <iframe 
+              title="Localização do Colégio na Colônia Marcelino"
+              src="https://maps.google.com/maps?q=Col%C3%B4nia%20Marcelino%20S%C3%A3o%20Jos%C3%A9%20dos%20Pinhais&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+              width="100%" 
+              height="220" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
           </div>
 
-          <div class="mapa-preview">
-            <div class="mapa-img-placeholder">
-              <svg class="maps-icon" viewBox="0 0 24 24" width="48" height="48">
-                <path fill="#ea4335" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-                <circle fill="#fff" cx="12" cy="9" r="2.5"/>
-              </svg>
-              <span>Google Maps</span>
-              <small>Colônia Marcelino · Área Rural</small>
-            </div>
-          </div>
-
-          <div class="contato-items" style="margin-top: 1rem;">
-            <div class="contato-item location-item">
-              <div class="icon-circle">🏘️</div>
-              <div class="item-text">
-                <small>Região</small>
-                <strong>Colônia Marcelino · Área Rural</strong>
-                <span class="sub-loc">São José dos Pinhais - PR</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="card-contato-footer">
-            <a href="https://maps.google.com/?q=Colégio+Estadual+do+Campo+Irmã+Ambrósia+Sabatovich+Colônia+Marcelino+São+José+dos+Pinhais" target="_blank" rel="noopener noreferrer" class="btn-maps">
-              <span>🗺️ Abrir no Google Maps</span>
+          <div class="card-footer-btn">
+            <a href="https://maps.google.com/?q=Colônia+Marcelino+São+José+dos+Pinhais" target="_blank" rel="noopener noreferrer" class="btn btn-maps-full">
+              🗺️ Abrir no Google Maps
             </a>
           </div>
         </div>
 
       </div>
     </section>
-  </main>
 
-  <!-- Modal do Formulário de E-mail Direto no Site -->
-  <div id="modalEmail" class="modal-overlay" hidden>
-    <div class="modal-box">
-      <button id="fecharModal" class="fechar-modal" aria-label="Fechar formulário">&times;</button>
-      <h3>Enviar Mensagem à Secretaria</h3>
-      <p>Preencha os campos abaixo para enviar sua mensagem diretamente para a secretaria.</p>
-      
-      <form id="formMensagemDireta">
-        <div class="campo-form">
-          <label for="nomeRemetente">Seu Nome:</label>
-          <input type="text" id="nomeRemetente" required placeholder="Digite seu nome completo">
-        </div>
-        <div class="campo-form">
-          <label for="emailRemetente">Seu E-mail:</label>
-          <input type="email" id="emailRemetente" required placeholder="seuemail@exemplo.com">
-        </div>
-        <div class="campo-form">
-          <label for="assuntoMsg">Assunto:</label>
-          <input type="text" id="assuntoMsg" required placeholder="Ex: Informações sobre matrícula">
-        </div>
-        <div class="campo-form">
-          <label for="textoMsg">Mensagem:</label>
-          <textarea id="textoMsg" rows="4" required placeholder="Escreva sua mensagem aqui..."></textarea>
-        </div>
-        <button type="submit" class="btn btn-enviar">Enviar Mensagem</button>
-      </form>
-      <div id="statusEnvio" hidden></div>
-    </div>
-  </div>
+  </main>
 
   <button class="topo" id="topo" aria-label="Voltar ao topo da página">↑</button>
 
   <footer>
-    <p>© <span id="anoFooter">2026</span> Colégio Estadual do Campo Irmã Ambrósia Sabatovich - Todos os direitos reservados.</p>
+    <p>© <span id="anoFooter">2026</span> Colégio Estadual do Campo Irmã Ambrósia Sabatovich — Todos os direitos reservados.</p>
   </footer>
-
-  <style>
-    .sr-only {
-      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-      overflow: hidden; clip: rect(0,0,0,0); border: 0;
-    }
-    .sr-only:focus {
-      position: fixed; top: 10px; left: 10px; width: auto; height: auto;
-      padding: 1rem; background: var(--blue); color: #fff; z-index: 999;
-      clip: auto; border-radius: 8px; font-weight: bold; text-decoration: none;
-    }
-  </style>
 
   <script src="script.js"></script>
 </body>
